@@ -151,8 +151,8 @@
                             </div>
 
                             <input type="submit" class="btn btn-primary" name="salvandoGerente" id="salvar" value="Salvar"/>
+                            <a href="GerenteBusca.php" class="btn btn-secondary">Buscar Gerente</a>
                             <a href="Menu.php" class="btn btn-danger">Voltar ao Menu</a>
- 
                             
                     </div>
                 </div>

@@ -142,9 +142,9 @@
                             </div>
 
                             <input type="submit" class="btn btn-primary" name="salvandoCliente" id="salvandoCliente" value="Salvar"/>
+                            <a href="ClienteBusca.php" class="btn btn-secondary">Buscar Cliente</a>
                             <a href="Menu.php" class="btn btn-danger">Voltar ao Menu</a>
- 
-                            
+                         
                     </div>
                 </div>
 
