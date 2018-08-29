@@ -4,9 +4,6 @@ require_once 'ClienteController.php';
 require_once 'Model.php';
 $cc = new ClienteController();
 
-if(isset($_GET['d'])){
-    $cc->delete($_GET['d']);
-}
 
 ?>
 
@@ -57,13 +54,6 @@ if(isset($_GET['d'])){
                     <td><?php echo $value->login; ?></td>
                     <td><?php echo $value->senha; ?></td>
                      
-                       
-                        <td>
-                    
-                            <a href="EditarCliente.php?e=<?= $value->id ?>">Editar </a>
-                            <a href="?d=<?= $value->id ?>">Deletar</a>
-                    
-                        </td>
                     </tr>
                     </tbody>
                 <?php endforeach; ?>
