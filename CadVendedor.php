@@ -5,23 +5,23 @@
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadastro de Clientes</title>
+    <title>Cadastro de Vendedor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
 <body>
 
-<php? require_once'ClienteDAO.php';?>
+<php? require_once'DAO/ClienteDAO.php';?>
 <div class="container">
     <form method="post" action="Save.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
-                    <h5 class="card-header">Cadastro do Cliente</h5>
+                    <h5 class="card-header">Cadastro do Vendedor</h5>
                     <div class="card-body">
                         <div class="form-row">
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
 
                                 <label for="nome">Nome:</label>
                                 <input type="text" id="nome" class="form-control" name="nome" placeholder="Digite seu nome">
@@ -52,7 +52,7 @@
                             
                             </div>
                             
-                            <div class="form-group col-3">
+                            <div class="form-group col-2">
                             
                                 <label for="datanasc">Data Nascimento:</label>
                                 <input type="date" id="datanasc" class="form-control" name="datanasc">
@@ -93,7 +93,7 @@
                            <div class="form-group col-3">
                             
                             <label for="cidade">Cidade:</label>
-                            <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Digite o nome da sua cidade">
+                            <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Digite sua cidade">
                         
                            </div>
 
@@ -101,27 +101,36 @@
 
                             <div class="form-group col-2">
                             
-                            <label for="situacao">Situação:</label>
-                                <select name="situacao" id="situacao" class="form-control">
-                                    <option value="Ativo">Ativo</option>
-                                    <option value="Desativado">Desativado</option>
+                            <label for="situacao">Cargo:</label>
+                                <select name="cargo" id="cargo" class="form-control">
+                                    <option value="Vendedor">Vendedor</option>
                                 </select>
                             
                             </div>
 
                    
                             
-                            <div class="form-group col-2">
+                            <div class="form-group col-1">
                             
                             <label for="estado">Estado:</label>
-                                <select name="estado" id="estado" class="form-control">
+                                <select name="estado" id="estado" class="form-control" placeholder="Selecione seu estado"> 
                                     <option value="PE">PE</option>
                                     <option value="PB">PB</option>
                                 </select>
                             
                             </div>
 
-                            <div class="form-group col-5">
+
+                             <div class="form-group col-3">
+
+                                <label for="nivel_func">Nivel</label>
+                                <input type="text" id="nivel_func"  maxlength="11" class="form-control" name="nivel_func" value="Usuario">
+
+                            </div>
+
+                            
+
+                            <div class="form-group col-3">
 
                                 <label for="cep">CEP:</label>
                                 <input type="text" id="cep"  maxlength="11" class="form-control" name="cep" placeholder="00000-000">
@@ -141,15 +150,12 @@
 
                             </div>
 
-                            <input type="submit" class="btn btn-primary" name="salvandoCliente" id="salvandoCliente" value="Salvar"/>
-                            <a href="ClienteBusca.php" class="btn btn-secondary">Buscar Cliente</a>
-                            <a href="Menu.php" class="btn btn-danger">Voltar ao Menu</a>
-                         
+                            <input type="submit" class="btn btn-primary" name="salvandoVendedor" id="salvandoVendedor" value="Salvar"/>
+                            <a href="GerenteBusca.php" class="btn btn-secondary">Buscar Vendedor</a>
+                            <a href="Menu.php" class="btn btn-danger">Voltar ao  Menu</a>
+                            
                     </div>
                 </div>
-
-
-                
     
 </body>
 </html>

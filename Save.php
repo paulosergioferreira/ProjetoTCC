@@ -2,9 +2,11 @@
 
 require_once'GerenteController.php';
 require_once'ClienteController.php';
+require_once'VendedorController.php';
 
 $c = new ClienteController();
 $g = new GerenteController();
+$v = new VendedorController();
 //Pegando os valores inseridos no layout, que serão usados no controller, através da função insert.
 if(isset($_POST['salvandoCliente'])){
     $c->insert($_POST['nome'], $_POST['rg'], $_POST['cpf'], $_POST['sexo'], $_POST['datanasc'], $_POST['telefone'],$_POST['numero_casa'],
@@ -31,5 +33,19 @@ if(isset($_POST['editarGerente'])){
         require_once'listaGerentes.php';
     
 }
+
+if(isset($_POST['salvandoVendedor'])){
+    $v->insert($_POST['nome'], $_POST['rg'], $_POST['cpf'], $_POST['sexo'], $_POST['datanasc'], $_POST['telefone'],$_POST['numero_casa'],
+        $_POST['rua'], $_POST['bairro'], $_POST['cidade'], $_POST['estado'], $_POST['cep'], $_POST['login'], $_POST['senha'], $_POST['nivel_func'], $_POST['cargo'] );
+        require_once'listaVendedores.php';
+}
+
+if(isset($_POST['editarVendedor'])){  
+    $v->update($_POST['id'], $_POST['nome'], $_POST['rg'], $_POST['cpf'], $_POST['sexo'], $_POST['datanasc'], $_POST['telefone'],$_POST['numero_casa'],
+        $_POST['rua'], $_POST['bairro'], $_POST['cidade'], $_POST['estado'], $_POST['cep'], $_POST['login'], $_POST['senha'],  $_POST['nivel_func'], $_POST['cargo'] );
+        require_once'listaVendedores.php';
+    
+}
+
 
 ?>

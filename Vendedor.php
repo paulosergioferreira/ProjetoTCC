@@ -1,5 +1,7 @@
  <?php
 
+require_once'funcionario.php';
+
 class Vendedor extends funcionario{
 
     public function getId()
@@ -173,12 +175,12 @@ class Vendedor extends funcionario{
         $this->situacao = $situacao;
     }
 
-    public function getNivel()
+    public function getNivelFunc()
     {
         return $this->nivel_func;
     }
 
-    public function setNivel($nivel)
+    public function setNivelFunc($nivel)
     {
         $this->nivel_func = $nivel;
     }

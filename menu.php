@@ -8,24 +8,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 </head>
-<ul class="nav nav-tabs" background-color:#778>
+<ul class="navbar navbar-dark bg-dark" id="pills-tab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" href="menu.php">Tela Principal</a>
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="CadCliente.php">Cadastro de Clientes</a>
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="CadCliente.php" role="tab" aria-controls="pills-profile" aria-selected="false">Clientes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="CadGerente.php">Cadastro de Gerente(Adm)</a>
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="CadGerente.php" role="tab" aria-controls="pills-contact" aria-selected="false">Gerente</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="listaClientes.php">Lista de Clientes Cadastrados</a>
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="CadVendedor.php" role="tab" aria-controls="pills-profile" aria-selected="false">Vendedor</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="listaGerentes.php">Lista de Gerentes Cadastrados(Adm)</a>
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="listaClientes.php" role="tab" aria-controls="pills-profile" aria-selected="false">Lista Clientes</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="listaGerentes.php" role="tab" aria-controls="pills-contact" aria-selected="false">Lista Gerente</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="listaVendedores.php" role="tab" aria-controls="pills-profile" aria-selected="false">Lista Vendedor</a>
+  </li>
+
 </ul>
+
 
 </body>
 </html>

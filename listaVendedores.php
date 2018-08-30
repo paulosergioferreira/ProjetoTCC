@@ -1,8 +1,8 @@
 <?php 
 
-require_once 'GerenteController.php';
+require_once 'VendedorController.php';
 require_once 'Model.php';
-$gc = new GerenteController();
+$vc = new VendedorController();
 
 ?>
 
@@ -13,7 +13,7 @@ $gc = new GerenteController();
    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lista de Gerentes</title>
+    <title>Lista de Vendedores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
@@ -33,15 +33,16 @@ $gc = new GerenteController();
                     <th>Telefone</th>
                     <th>Login</th>
                     <th>Senha</th>
+                    
                   
                     
                   </tr>
                 </thead>
 
-                <?php foreach($gc->findAll() as $key=>$value): ?>
+                <?php foreach($vc->findAll() as $key=>$value): ?>
                     <tbody>
                     <tr>
-                    <td><?php echo $value->id; ?></td>
+                    <td><?php echo $value->codigo; ?></td>
                     <td><?php echo $value->nome; ?></td>
                     <td><?php echo $value->cpf; ?></td>
                     <td><?php echo $value->nivel_func; ?></td> 
@@ -49,6 +50,7 @@ $gc = new GerenteController();
                     <td><?php echo $value->telefone; ?></td>
                     <td><?php echo $value->login; ?></td>
                     <td><?php echo $value->senha; ?></td>
+                     
                        
                     </tr>
                     </tbody>
