@@ -4,7 +4,7 @@ require_once'Venda.php';
 
 class VendaCliente extends Venda{
 
-    protected $usuarioId;    
+    protected $clienteId;    
 
     
     public function getId()
@@ -100,14 +100,14 @@ class VendaCliente extends Venda{
     }
 
 
-    public function getUsuarioId()
+    public function getClienteId()
     {
-        return $this->usuarioId;
+        return $this->clienteId;
     }
 
-    public function setRua($usuarioId)
+    public function setClienteId($clienteId)
     {
-        $this->usuarioId = $usuarioId;
+        $this->clienteId = $clienteId;
     }
 
     

@@ -3,10 +3,11 @@
 require_once'GerenteController.php';
 require_once'ClienteController.php';
 require_once'VendedorController.php';
-
+require_once'VendaController.php';
 $c = new ClienteController();
 $g = new GerenteController();
 $v = new VendedorController();
+$vc = new VendaController();
 //Pegando os valores inseridos no layout, que serão usados no controller, através da função insert.
 if(isset($_POST['salvandoCliente'])){
     $c->insert($_POST['nome'], $_POST['rg'], $_POST['cpf'], $_POST['sexo'], $_POST['datanasc'], $_POST['telefone'],$_POST['numero_casa'],
@@ -47,5 +48,11 @@ if(isset($_POST['editarVendedor'])){
     
 }
 
+if(isset($_POST['comprar'])){  
+    $vc->insert($_POST['destino'], $_POST['preco'], $_POST['transporte'], $_POST['nivelHotel'], $_POST['translado'], $_POST['descricao'], 
+    $_POST['diaria'], $_POST['tipo'], $_POST['clienteId']);
+    require_once'listaVendedores.php'; 
+    
+}
 
 ?>
