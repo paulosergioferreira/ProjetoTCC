@@ -18,11 +18,12 @@
     <div class="col-md-3"></div>
     <div class="col-md-6">
     
-      <form method="post" class="form-login" action="CadCliente">
+      <form method="post" class="form-login" action="acesso.php">
       <div class="form-row">
           <div class="form-group col-12"></br></br></br></br></br>
           
             <label for="login">Login</label>
+           
             <input type="text" class="form-control" id="login" name="login" placeholder="Entre com seu Login">
     
           </div>
@@ -34,7 +35,7 @@
             <input type="password" class="form-control" id="senha" name="senha" placeholder="Entre com sua senha">
           </div>
         </div>
-    <input type="submit" name="acessar" class="btn btn-primary" value="Acessar">
+    <input type="submit" name="Acessar" class="btn btn-primary" value="Acessar">
     <a href="CadCliente.php" class="btn btn-danger">Cadastra-se</a>
  </div>
  <div class="col-md-3"></div>

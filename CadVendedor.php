@@ -103,7 +103,7 @@
                             
                             <label for="situacao">Cargo:</label>
                                 <select name="cargo" id="cargo" class="form-control">
-                                    <option value="Vendedor">Vendedor</option>
+                                    <option value="1">Vendedor</option>
                                 </select>
                             
                             </div>
