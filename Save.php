@@ -48,11 +48,45 @@ if(isset($_POST['editarVendedor'])){
     
 }
 
-if(isset($_POST['comprar'])){  
+
+
+if(isset($_POST['comprar'])){ 
+    $destino = $_POST['destino'];
+        
+        if($destino == "Pernambuco" && $_POST['nivelHotel'] == 1){
+            $valor = 100;
+            $_POST['preco'] = $valor;
+
+        }else if($destino == "Pernambuco" && $_POST['nivelHotel'] == 2){
+            $valor = 150;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Pernambuco" && $_POST['nivelHotel'] == 3){
+            $valor = 200;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Pernambuco" && $_POST['nivelHotel'] == 4){
+            $valor = 250;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Pernambuco" && $_POST['nivelHotel'] == 5){
+            $valor = 300;
+            $_POST['preco'] = $valor;
+    
+        }
+
+
+
+
+
+
+
+
     $vc->insert($_POST['destino'], $_POST['preco'], $_POST['transporte'], $_POST['nivelHotel'], $_POST['translado'], $_POST['descricao'], 
     $_POST['diaria'], $_POST['tipo'], $_POST['clienteId']);
-    require_once'listaVendedores.php'; 
-    
 }
+
+
+
 
 ?>

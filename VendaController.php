@@ -18,8 +18,7 @@ class VendaController
     }
 
     //Pegando os valores inseridos no layout de cadastro que foram trasidos pela classe save e inserindo eles nos setrs.
-    public function insert($destino, $preco, $transporte, $nivelHotel, $translado, $descricao, $diaria, $tipo, 
-    $clienteId){
+    public function insert($destino, $preco, $transporte, $nivelHotel, $translado, $descricao, $diaria, $tipo, $clienteId){
 
         $this->vc->setDestino($destino);
         $this->vc->setPreco($preco);
