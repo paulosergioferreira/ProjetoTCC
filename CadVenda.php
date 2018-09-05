@@ -90,17 +90,14 @@
                                 </select>
                         </div>
 
-                          <div class="form-group col-3">
-                            <label for="diaria">Preço:</label>
-                            <input type="text" id="preco" class="form-control" name="preco">
-                            
+                        <div class="form-group col-12">
+                            <label for="exampleFormControlTextarea1">Descrição</label>
+                            <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
                         </div>
-                        <div class="form-group col-3">
-                            <label for="diaria">Descrição:</label>
-                            <input type="text" id="descricao" class="form-control" name="descricao">
-                            
                         </div>
-                        
+                            <input type="hidden" id="preco" class="form-control" name="preco">
+                            
+                       
                     <input type="submit" name="comprar" value="comprar" class="btn btn-success btn-block">
                     </div>
 </div>

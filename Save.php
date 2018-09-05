@@ -72,18 +72,117 @@ if(isset($_POST['comprar'])){
         }else if($destino == "Pernambuco" && $_POST['nivelHotel'] == 5){
             $valor = 300;
             $_POST['preco'] = $valor;
+            
+        }else if($destino == "Paraiba" && $_POST['nivelHotel'] == 1){
+                $valor = 200;
+                $_POST['preco'] = $valor;
     
-        }
+        }else if($destino == "Paraiba" && $_POST['nivelHotel'] == 2){
+                $valor = 250;
+                $_POST['preco'] = $valor;
+        
+        }else if($destino == "Paraiba" && $_POST['nivelHotel'] == 3){
+                $valor = 300;
+                $_POST['preco'] = $valor;
+        
+        }else if($destino == "Paraiba" && $_POST['nivelHotel'] == 4){
+                $valor = 450;
+                $_POST['preco'] = $valor;
+        
+        }else if($destino == "Paraiba" && $_POST['nivelHotel'] == 5){
+                $valor = 500;
+                $_POST['preco'] = $valor;
 
+        }else if($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 1){
+            $valor = 300;
+            $_POST['preco'] = $valor;
 
+        }else if($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 2){
+            $valor = 450;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 3){
+            $valor = 500;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 4){
+            $valor = 650;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 5){
+            $valor = 700;
+            $_POST['preco'] = $valor;
 
+        }else if($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 1){
+            $valor = 400;
+            $_POST['preco'] = $valor;
 
+        }else if($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 2){
+            $valor = 550;
+            $_POST['preco'] = $valor;
+
+        }else if($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 3){
+            $valor = 600;
+            $_POST['preco'] = $valor;
+
+        }else if($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 4){
+            $valor = 750;
+            $_POST['preco'] = $valor;
+
+        }else if($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 5){
+            $valor = 800;
+            $_POST['preco'] = $valor;
+        
+        }else if($destino == "Amazonas" && $_POST['nivelHotel'] == 1){
+            $valor = 500;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Amazonas" && $_POST['nivelHotel'] == 2){
+            $valor = 650;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Amazonas" && $_POST['nivelHotel'] == 3){
+            $valor = 700;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Amazonas" && $_POST['nivelHotel'] == 4){
+            $valor = 850;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "Amazonas" && $_POST['nivelHotel'] == 5){
+            $valor = 900;
+            $_POST['preco'] = $valor;
+
+        }else if($destino == "São Paulo" && $_POST['nivelHotel'] == 1){
+            $valor = 600;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "São Paulo" && $_POST['nivelHotel'] == 2){
+            $valor = 750;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "São Paulo" && $_POST['nivelHotel'] == 3){
+            $valor = 800;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "São Paulo" && $_POST['nivelHotel'] == 4){
+            $valor = 950;
+            $_POST['preco'] = $valor;
+    
+        }else if($destino == "São Paulo" && $_POST['nivelHotel'] == 5){
+            $valor = 1100;
+            $_POST['preco'] = $valor;}   
+        
+     
+
+        
 
 
 
 
     $vc->insert($_POST['destino'], $_POST['preco'], $_POST['transporte'], $_POST['nivelHotel'], $_POST['translado'], $_POST['descricao'], 
     $_POST['diaria'], $_POST['tipo'], $_POST['clienteId']);
+
 }
 
 
