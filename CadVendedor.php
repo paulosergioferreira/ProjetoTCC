@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
-                    <h5 class="card-header">Cadastro do Vendedor</h5>
+                    <h5 class="card-header">Cadastro de Vendedores</h5>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-4">
@@ -71,7 +71,7 @@
                             <div class="form-group col-2">
                             
                                 <label for="numero_casa">N° da casa:</label>
-                                <input type="text" id="numero_casa" class="form-control" name="numero_casa">
+                                <input type="text" id="numero_casa" class="form-control" name="numero_casa" placeholder="Digite n° da Casa">
                             
                             </div>
 
@@ -103,7 +103,7 @@
                             
                             <label for="situacao">Cargo:</label>
                                 <select name="cargo" id="cargo" class="form-control">
-                                    <option value="1">Vendedor</option>
+                                    <option value="vendedor">Vendedor</option>
                                 </select>
                             
                             </div>
@@ -151,7 +151,7 @@
                             </div>
 
                             <input type="submit" class="btn btn-primary" name="salvandoVendedor" id="salvandoVendedor" value="Salvar"/>
-                            <a href="GerenteBusca.php" class="btn btn-secondary">Buscar Vendedor</a>
+                            <a href="VendedorBusca.php" class="btn btn-secondary">Buscar Vendedor</a>
                             <a href="Menu.php" class="btn btn-danger">Voltar ao  Menu</a>
                             
                     </div>

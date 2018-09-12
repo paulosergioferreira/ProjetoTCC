@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
-                    <h5 class="card-header">Cadastro do Gerente</h5>
+                    <h5 class="card-header">Cadastro de Gerentes</h5>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-4">

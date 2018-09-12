@@ -1,12 +1,13 @@
 <?php
 
-require_once'Pessoa.php';
+require_once 'Pessoa.php';
 
-class Cliente extends Pessoa{
+class Cliente extends Pessoa
+{
 
-    protected $situacao;    
+    protected $situacao;
 
-    
+
     public function getId()
     {
         return $this->id;
@@ -127,7 +128,7 @@ class Cliente extends Pessoa{
     {
         $this->cidade = $cidade;
     }
-    
+
     public function getCep()
     {
         return $this->cep;

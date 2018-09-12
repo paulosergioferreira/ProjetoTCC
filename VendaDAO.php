@@ -1,13 +1,14 @@
 <?php
 
 
-require_once'Model.php';
-require_once'DB.php';
+require_once 'Model.php';
+require_once 'DB.php';
 
 //Classe DAO onde contem as funções de CRUD
-class VendaDAO extends Model{
+class VendaDAO extends Model
+{
 
-    protected $table  = "viagem";
+    protected $table = "viagem";
 
     public function insert($obj)
     {
@@ -22,8 +23,8 @@ class VendaDAO extends Model{
         $stmt->bindValue(6, $obj->getDescricao());
         $stmt->bindValue(7, $obj->getDiaria());
         $stmt->bindValue(8, $obj->getTipo());
-        $stmt->bindValue(9, $obj->getClienteId());
-         
+        $stmt->bindValue(9, $obj->getUsuarioId());
+
         $stmt->execute();
         $stmt->closeCursor();
 

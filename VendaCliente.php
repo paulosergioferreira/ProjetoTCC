@@ -1,12 +1,13 @@
 <?php
 
-require_once'Venda.php';
+require_once 'Venda.php';
 
-class VendaCliente extends Venda{
+class VendaCliente extends Venda
+{
 
-    protected $clienteId;    
+    protected $usuarioId;
 
-    
+
     public function getId()
     {
         return $this->id;
@@ -100,17 +101,17 @@ class VendaCliente extends Venda{
     }
 
 
-    public function getClienteId()
+    public function getUsuarioId()
     {
-        return $this->clienteId;
+        return $this->usuarioId;
     }
 
-    public function setClienteId($clienteId)
+    public function setUsuarioId($usuarioId)
     {
-        $this->clienteId = $clienteId;
+        $this->usuarioId = $usuarioId;
     }
 
-    
+
 }
 
 

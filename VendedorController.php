@@ -2,9 +2,9 @@
 
 //Pega as informações inseridas pelos usuarios´p
 
-require_once'Vendedor.php';
-require_once'VendedorDAO.php';
-require_once'DB.php';
+require_once 'Vendedor.php';
+require_once 'VendedorDAO.php';
+require_once 'DB.php';
 class VendedorController
 {
     private $v;
@@ -17,8 +17,24 @@ class VendedorController
     }
 
     //Pegando os valores inseridos no layout de cadastro que foram trasidos pela classe save e inserindo eles nos setrs.
-    public function insert($nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa, $rua, 
-    $bairro, $cidade, $estado, $cep, $login, $senha, $nivel_func, $cargo){
+    public function insert(
+        $nome,
+        $rg,
+        $cpf,
+        $sexo,
+        $dtnasc,
+        $telefone,
+        $numero_casa,
+        $rua,
+        $bairro,
+        $cidade,
+        $estado,
+        $cep,
+        $login,
+        $senha,
+        $nivel_func,
+        $cargo
+    ) {
 
         $this->v->setNome($nome);
         $this->v->setRg($rg);
@@ -39,12 +55,29 @@ class VendedorController
        
         //passando os valores como objeto para a classe ClienteDÂO
         $this->vdao->insert($this->v);
-        
+
     }
 
-    public function update($id, $nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa, $rua, 
-    $bairro, $cidade, $estado, $cep, $login, $senha, $nivel_func, $cargo){
-       
+    public function update(
+        $id,
+        $nome,
+        $rg,
+        $cpf,
+        $sexo,
+        $dtnasc,
+        $telefone,
+        $numero_casa,
+        $rua,
+        $bairro,
+        $cidade,
+        $estado,
+        $cep,
+        $login,
+        $senha,
+        $nivel_func,
+        $cargo
+    ) {
+
         $this->v->setId($id);
         $this->v->setNome($nome);
         $this->v->setRg($rg);
@@ -60,12 +93,12 @@ class VendedorController
         $this->v->setCep($cep);
         $this->v->setLogin($login);
         $this->v->setSenha($senha);
-        $this->v->setSituacao($nivel_func);
+        $this->v->setNivelFunc($nivel_func);
         $this->v->setCargo($cargo);
-        
+
         $this->vdao->update($this->v);
-           
-       
+
+
     }
 
     public function findAll()
@@ -73,21 +106,24 @@ class VendedorController
         return $this->vdao->findAll();
     }
 
-   
-    public function buscarPorNome($nome){
-       return $this->vdao->findName($nome);
+
+    public function buscarPorNome($nome)
+    {
+        return $this->vdao->findName($nome);
     }
 
 
-public function find($id){
-    return $this->vdao->find($id);
-}
-
-    public function delete($id){
-      $this->vdao->delete($id);
+    public function find($id)
+    {
+        return $this->vdao->find($id);
     }
 
-   
+    public function delete($id)
+    {
+        $this->vdao->delete($id);
+    }
+
+
 
 }
 

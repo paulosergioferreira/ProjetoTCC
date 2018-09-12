@@ -1,6 +1,7 @@
 <?php
 
-abstract class Pessoa{
+abstract class Pessoa
+{
 
     protected $id;
     protected $nome;
@@ -17,7 +18,7 @@ abstract class Pessoa{
     protected $cep;
     protected $login;
     protected $senha;
-    
+
 
 }
 

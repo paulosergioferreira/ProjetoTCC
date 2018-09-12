@@ -36,7 +36,7 @@ $g = $gc->find($_GET['e']);
 
 
                                 <label for="nome">Nome:</label>
-                                <input type="text" id="nome" class="form-control" name="nome" value=<?php $g->nome ?>>
+                                <input type="text" id="nome" class="form-control" name="nome" placeholder="Digite seu nome" value=<?php $g->nome ?>>
                             
                             </div>
                             
@@ -65,7 +65,7 @@ $g = $gc->find($_GET['e']);
                             <div class="form-group col-2">
                             
                                 <label for="sexo">Sexo:</label>
-                                <select name="sexo" id="sexo" class="form-control" value=<?php $g->sexo ?>>
+                                <select name="sexo" id="sexo" class="form-control" placeholder="Selecione seu Sexo" value=<?php $g->sexo ?>>
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
                                 </select>
@@ -87,7 +87,7 @@ $g = $gc->find($_GET['e']);
                             <div class="form-group col-2">
                             
                                 <label for="numero_casa">N° da casa:</label>
-                                <input type="number" id="numero_casa" class="form-control" name="numero_casa" value=<?php $g->numero_casa ?>>
+                                <input type="number" id="numero_casa" class="form-control" name="numero_casa" placeholder="Digite o n° da sua casa" value=<?php $g->numero_casa ?>>
                             
                             </div>
 
@@ -109,7 +109,7 @@ $g = $gc->find($_GET['e']);
                            <div class="form-group col-4">
                             
                             <label for="cidade">Cidade:</label>
-                            <input type="text" id="cidade" class="form-control" name="cidade" value=<?php $g->cidade ?>>
+                            <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Digite o nome da sua Cidade" value=<?php $g->cidade ?>>
                         
                            </div>
 
@@ -144,7 +144,7 @@ $g = $gc->find($_GET['e']);
                             <div class="form-group col-2">
                             
                             <label for="estado">Estado:</label>
-                                <select name="estado" id="estado" class="form-control" value=<?php $g->estado ?>>
+                                <select name="estado" id="estado" class="form-control" placeholder="Digite seu Estado" value=<?php $g->estado ?>>
                                     <option value="1">PE</option>
                                     <option value="2">PB</option>
                                 </select>

@@ -12,23 +12,29 @@
 </head>
 <body>
 <?php
-include'GerenteController.php';
+include 'GerenteController.php';
 $gc = new GerenteController();
-if(isset($_GET['d']) && $_GET['d'] != null){
+if (isset($_GET['d']) && $_GET['d'] != null) {
   $gc->delete($_GET['d']);
-} 
+}
 ?>
 <div class="container" id="tabela">
   <div class="row mt-4">
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-11">
+            <div class="form-group col-10">
               <input type="text" name="b" id="b" class="form-control">
             </div>
             <div class="form-group col-1">
-              <input type="submit" class="btn btn-success btn-danger" value="Buscar">
+              <input type="submit" class="btn btn-primary" value="Buscar">
             </div>
+            <div class="form-group col-1">
+       
+            <a href="CadGerente.php" class="btn btn-secondary" >Voltar</a>
+          
+           </div>
+         
 
         </div>
       </form>
@@ -36,7 +42,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
   </div>
   <div class="row">
     <div class="col-md-12">
-      <table class="table table-sm table-hover">
+      <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
@@ -50,12 +56,12 @@ if(isset($_GET['d']) && $_GET['d'] != null){
           </tr>
         </thead>
         <tbody>    
-        <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
-            <?php foreach( $gc->buscarPorNome($_GET['b']) as $clike ): ?>
+        <?php if (isset($_GET['b']) && $_GET['b'] != null) : ?>
+            <?php foreach ($gc->buscarPorNome($_GET['b']) as $clike) : ?>
 
-              <?php if($clike != null){ ?>
+              <?php if ($clike != null) { ?>
                   <tr>
-                       <th scope="row"><?= $clike->id ?></th>
+                      <th scope="row"><?= $clike->id ?></th>
                       <td><?= $clike->nome ?></td>
                       <td><?= $clike->rg ?></td>
                       <td><?= $clike->cpf ?></td>
@@ -63,17 +69,20 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                       <td><?= $clike->senha ?></td>
                       
                       <td>
-                          <a href="EditarGerente.php?e=<?= $clike->id ?>">Editar</a>
-                          <a href="?d=<?= $clike->id ?>">Deletar</a>
+                          <a href="EditarGerente.php?e=<?= $clike->id ?>" class="btn btn-primary">Editar</a>
+                          <a href="?d=<?= $clike->id ?>"class="btn btn-secondary" >Deletar</a>
                       </td>
                       
                   </tr>
-               <?php } else { echo "Não conseguimos encontrar, Tente novamente!"; } ?>
+               <?php 
+            } else {
+              echo "Não conseguimos encontrar, Tente novamente!";
+            } ?>
                
           <?php endforeach; ?>
-              <?php else: ?>
+              <?php else : ?>
                 
-              <?php foreach ($gc->findAll() as $g): ?>
+              <?php foreach ($gc->findAll() as $g) : ?>
                 <tr>
                     
                     <th scope="row"><?= $g->id ?></th>
@@ -83,8 +92,8 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                     <td><?= $g->login ?></td>
                     <td><?= $g->senha ?></td>
                     <td>
-                        <a href="EditarGerente.php?e=<?= $g->id ?>">Editar</a>
-                        <a href="?d=<?= $g->id ?>">Deletar</a>
+                        <a href="EditarGerente.php?e=<?= $g->id ?>" class="btn btn-primary">Editar</a>
+                        <a href="?d=<?= $g->id ?>" class="btn btn-secondary" >Deletar</a>
                     </td>
                      
                     

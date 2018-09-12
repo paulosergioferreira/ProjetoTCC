@@ -1,8 +1,8 @@
 <?php require_once 'ClienteController.php'; ?>
 
 <?php
-$cc = new ClienteController();
-
+$vc = new VendaController();
+$v = $vc->find($_GET['e']);
 ?>
 
 <div class="container">
@@ -14,7 +14,7 @@ $cc = new ClienteController();
                 <input type="number" name="estado" value="1" hidden>
 
                 <div class="card">
-                    <h5 class="card-header">Compra da Viagem</h5>
+                    <h5 class="card-header">Editar Viagem</h5>
                     
 
                         <div class="form-row">

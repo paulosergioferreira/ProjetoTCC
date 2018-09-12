@@ -9,97 +9,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+
 </head>
 <body>
 
 <php? require_once'ClienteDAO.php';?>
-<div class="container">
-    <form method="post" action="Save.php">
-        <div class="row">
-            <div class="col-md-12 mt-4">
-                <div class="card">
-                    <h5 class="card-header">Cadastro do Cliente</h5>
-                    <div class="card-body">
-                        <div class="form-row">
-                            <div class="form-group col-3">
+    
+    <div class="container">
+        <form method="post" action="Save.php">
+            <div class="row">
+                <div class="col-md-12 mt-4">
+                    <div class="card">
+                    <h5 class="card-header">Cadastro de Clientes</h5>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-3">
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" id="nome" class="form-control" name="nome" placeholder="Digite seu nome">
+                                </div>
+                            
+                                <div class="form-group col-2">
+                                    <label for="rg">RG:</label>
+                                    <input type="text" id="rg" class="form-control" name="rg">
+                                </div>
 
-                                <label for="nome">Nome:</label>
-                                <input type="text" id="nome" class="form-control" name="nome" placeholder="Digite seu nome">
-                            
-                            </div>
-                            
-                            <div class="form-group col-2">
-                            
-                                <label for="rg">RG:</label>
-                                <input type="text" id="rg" class="form-control" name="rg">
-                            
-                            </div>
+                                <div class="form-group col-2">
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" id="cpf" class="form-control" name="cpf">
+                                </div>
 
-                            <div class="form-group col-2">
+                                <div class="form-group col-2">
+                                    <label for="sexo">Sexo:</label>
+                                        <select name="sexo" id="sexo" class="form-control">
+                                            <option value="masculino">Masculino</option>
+                                            <option value="feminino">Feminino</option>
+                                        </select>
+                                </div>
                             
-                                <label for="cpf">CPF:</label>
-                                <input type="text" id="cpf" class="form-control" name="cpf">
-                            
-                            </div>
-
-                            <div class="form-group col-2">
-                            
-                                <label for="sexo">Sexo:</label>
-                                <select name="sexo" id="sexo" class="form-control">
-                                    <option value="masculino">Masculino</option>
-                                    <option value="feminino">Feminino</option>
-                                </select>
-                            
-                            </div>
-                            
-                            <div class="form-group col-3">
-                            
-                                <label for="datanasc">Data Nascimento:</label>
-                                <input type="date" id="datanasc" class="form-control" name="datanasc">
-                            
-                            </div>
+                                <div class="form-group col-3">
+                                    <label for="datanasc">Data Nascimento:</label>
+                                    <input type="date" id="datanasc" class="form-control" name="datanasc">
+                                </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-3">
-                            
-                                <label for="telefone">Telefone:</label>
-                                <input type="text" id="telefone" class="form-control" name="telefone" placeholder="DDD+99999-9999">
-                            
-                            </div>
+                                    <label for="telefone">Telefone:</label>
+                                    <input type="text" id="telefone" class="form-control" name="telefone" placeholder="DDD+99999-9999">
+                                </div>
                             
                             <div class="form-group col-2">
-                            
                                 <label for="numero_casa">N° da casa:</label>
                                 <input type="text" id="numero_casa" class="form-control" name="numero_casa">
-                            
                             </div>
 
-                            
                             <div class="form-group col-7">
-                            
                                 <label for="rua">Rua:</label>
                                 <input type="text" id="rua"  class="form-control" name="rua" placeholder="Digite sua rua">
-                            
                             </div>
                         
                             <div class="form-group col-7">
                             
-                            <label for="bairro">Bairro:</label>
-                            <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Digite seu bairro">
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Digite seu bairro">
                         
                            </div>
                       
                            <div class="form-group col-3">
                             
-                            <label for="cidade">Cidade:</label>
-                            <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Digite o nome da sua cidade">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Digite o nome da sua cidade">
                         
                            </div>
 
-
-
-                            <div class="form-group col-2">
+                           <div class="form-group col-2">
                             
                             <label for="situacao">Situação:</label>
                                 <select name="situacao" id="situacao" class="form-control">
@@ -133,7 +116,7 @@
                                 <input type="text" id="login" class="form-control" name="login">
 
                             </div>
-
+ 
                             <div class="form-group col-2">
 
                                 <label for="senha">Senha:</label>

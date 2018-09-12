@@ -1,8 +1,9 @@
 <?php
 
-include_once'Funcionario.php';
+include_once 'Funcionario.php';
 
-class Gerente extends funcionario{
+class Gerente extends funcionario
+{
 
     public function getId()
     {

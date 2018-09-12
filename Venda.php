@@ -1,6 +1,7 @@
 <?php
 
-abstract class Venda{
+abstract class Venda
+{
 
     protected $id;
     protected $destino;

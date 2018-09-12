@@ -5,39 +5,44 @@
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pesquisar Vendedor</title>
+    <title>Pesquisar Gerente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
 <body>
 <?php
-include'VendedorController.php';
+include 'VendedorController.php';
 $vc = new VendedorController();
-if(isset($_GET['d']) && $_GET['d'] != null){
+if (isset($_GET['d']) && $_GET['d'] != null) {
   $vc->delete($_GET['d']);
-} 
-
+}
 ?>
 <div class="container" id="tabela">
   <div class="row mt-4">
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-11">
+            <div class="form-group col-10">
               <input type="text" name="b" id="b" class="form-control">
             </div>
             <div class="form-group col-1">
-              <input type="submit" class="btn btn-success btn-danger" value="Buscar">
+              <input type="submit" class="btn btn-primary" value="Buscar">
             </div>
+            <div class="form-group col-1">
+       
+            <a href="CadVendedor.php" class="btn btn-secondary" >Voltar</a>
+          
+           </div>
+         
+
         </div>
       </form>
     </div>
   </div>
-
   <div class="row">
     <div class="col-md-12">
-      <table class="table table-sm table-hover">
+      <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
@@ -46,35 +51,39 @@ if(isset($_GET['d']) && $_GET['d'] != null){
             <th scope="col">CPF</th>
             <th scope="col">LOGIN</th>
             <th scope="col">SENHA</th>
-           
+          
             
           </tr>
         </thead>
         <tbody>    
-        <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
-            <?php foreach( $vc->buscarPorNome($_GET['b']) as $clike ): ?>
+        <?php if (isset($_GET['b']) && $_GET['b'] != null) : ?>
+            <?php foreach ($vc->buscarPorNome($_GET['b']) as $vlike) : ?>
 
-              <?php if($clike != null){ ?>
+              <?php if ($vlike != null) { ?>
                   <tr>
-                       <th scope="row"><?= $clike->id ?></th>
-                      <td><?= $clike->nome ?></td>
-                      <td><?= $clike->rg ?></td>
-                      <td><?= $clike->cpf ?></td>
-                      <td><?= $clike->login ?></td>
-                      <td><?= $clike->senha ?></td>
+                      <th scope="row"><?= $vlike->id ?></th>
+                      <td><?= $vlike->nome ?></td>
+                      <td><?= $vlike->rg ?></td>
+                      <td><?= $vlike->cpf ?></td>
+                      <td><?= $vlike->login ?></td>
+                      <td><?= $vlike->senha ?></td>
+                  
                       
                       <td>
-                          <a href="EditarVendedor.php?e=<?= $clike->id ?>">Editar</a>
-                          <a href="?d=<?= $clike->id ?>">Deletar</a>
+                          <a href="EditarVendedor.php?e=<?= $vlike->id ?>" class="btn btn-primary">Editar</a>
+                          <a href="?d=<?= $vlike->id ?>"class="btn btn-secondary" >Deletar</a>
                       </td>
                       
                   </tr>
-               <?php } else { echo "Não conseguimos encontrar, Tente novamente!"; } ?>
+               <?php 
+            } else {
+              echo "Não conseguimos encontrar, Tente novamente!";
+            } ?>
                
           <?php endforeach; ?>
-              <?php else: ?>
+              <?php else : ?>
                 
-              <?php foreach ($vc->findAll() as $v): ?>
+              <?php foreach ($vc->findAll() as $v) : ?>
                 <tr>
                     
                     <th scope="row"><?= $v->id ?></th>
@@ -83,14 +92,13 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                     <td><?= $v->cpf ?></td>
                     <td><?= $v->login ?></td>
                     <td><?= $v->senha ?></td>
-                    
                     <td>
-                        <a href="EditarVendedor.php?e=<?= $v->id ?>">Editar</a>
-                        <a href="?d=<?= $v->id ?>">Deletar</a>
+                        <a href="EditarVendedor.php?e=<?= $v->id ?>" class="btn btn-primary">Editar</a>
+                        <a href="?d=<?= $v->id?>" class="btn btn-secondary" >Deletar</a>
                     </td>
                      
-
-           </tr>
+                    
+                     </tr>
             <?php endforeach; ?>
         <?php endif; ?>
         </tbody>

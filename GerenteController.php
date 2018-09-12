@@ -2,9 +2,9 @@
 
 //Pega as informações inseridas pelos usuarios´p
 
-require_once'Gerente.php';
-require_once'GerenteDAO.php';
-require_once'DB.php';
+require_once 'Gerente.php';
+require_once 'GerenteDAO.php';
+require_once 'DB.php';
 class GerenteController
 {
     private $g;
@@ -17,8 +17,24 @@ class GerenteController
     }
 
     //Pegando os valores inseridos no layout de cadastro que foram trasidos pela classe save e inserindo eles nos setrs.
-    public function insert($nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa, $rua, 
-    $bairro, $cidade, $estado, $cep, $login, $senha, $nivel_func, $cargo){
+    public function insert(
+        $nome,
+        $rg,
+        $cpf,
+        $sexo,
+        $dtnasc,
+        $telefone,
+        $numero_casa,
+        $rua,
+        $bairro,
+        $cidade,
+        $estado,
+        $cep,
+        $login,
+        $senha,
+        $nivel_func,
+        $cargo
+    ) {
 
         $this->g->setNome($nome);
         $this->g->setRg($rg);
@@ -39,12 +55,29 @@ class GerenteController
        
         //passando os valores como objeto para a classe ClienteDÂO
         $this->gdao->insert($this->g);
-        
+
     }
 
-    public function update($id, $nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa, $rua, 
-    $bairro, $cidade, $estado, $cep, $login, $senha, $nivel_func, $cargo){
-       
+    public function update(
+        $id,
+        $nome,
+        $rg,
+        $cpf,
+        $sexo,
+        $dtnasc,
+        $telefone,
+        $numero_casa,
+        $rua,
+        $bairro,
+        $cidade,
+        $estado,
+        $cep,
+        $login,
+        $senha,
+        $nivel_func,
+        $cargo
+    ) {
+
         $this->g->setId($id);
         $this->g->setNome($nome);
         $this->g->setRg($rg);
@@ -62,10 +95,10 @@ class GerenteController
         $this->g->setSenha($senha);
         $this->g->setSituacao($nivel_func);
         $this->g->setCargo($cargo);
-        
+
         $this->gdao->update($this->g);
-           
-       
+
+
     }
 
     public function findAll()
@@ -73,21 +106,24 @@ class GerenteController
         return $this->gdao->findAll();
     }
 
-   
-    public function buscarPorNome($nome){
-       return $this->gdao->findName($nome);
+
+    public function buscarPorNome($nome)
+    {
+        return $this->gdao->findName($nome);
     }
 
 
-public function find($id){
-    return $this->gdao->find($id);
-}
-
-    public function delete($id){
-      $this->gdao->delete($id);
+    public function find($id)
+    {
+        return $this->gdao->find($id);
     }
 
-   
+    public function delete($id)
+    {
+        $this->gdao->delete($id);
+    }
+
+
 
 }
 

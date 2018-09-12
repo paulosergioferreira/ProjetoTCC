@@ -1,8 +1,9 @@
  <?php
 
-require_once'funcionario.php';
+require_once 'funcionario.php';
 
-class Vendedor extends funcionario{
+class Vendedor extends funcionario
+{
 
     public function getId()
     {

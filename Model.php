@@ -7,14 +7,16 @@ abstract class Model
     protected $table;
 
     //Função molde para selecionar todos da tabela desejada.
-    public function findAll(){
-       $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table}");
-       $stmt->execute();
-       return $stmt->fetchAll();
+    public function findAll()
+    {
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table}");
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     //Função molde para selecionar apenas 1 elemento pelo ID da tabela especifica.
-    public function find($id){
+    public function find($id)
+    {
         $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE ID = ?");
         //Associa o valor passado $id ao parametro ? da sql.
         $stmt->bindValue(1, $id);
@@ -32,12 +34,21 @@ abstract class Model
     }
 
     //Função molde para buscar 1 elemento pelo nome na tabela desejada.
-    public function findName($nome){
+    public function findName($nome)
+    {
         $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NOME LIKE ?");
         $stmt->bindValue(1, "%" . $nome . "%");
         $stmt->execute();
         return $stmt->fetchAll();
-  }
+    }
+
+    public function findId($clienteId)
+    {
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE USUARIOID LIKE ?");
+        $stmt->bindValue(1, "%" . $clienteId . "%");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 
 
 

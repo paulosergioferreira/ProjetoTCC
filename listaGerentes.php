@@ -22,13 +22,12 @@ $gc = new GerenteController();
 <div class="container">
     <div class="row form-cadastro">
         <div class="col-md-12">
-           <table class="table table-hover">
-                <thead>
+           <table class="table table-striped">
+                <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
                     <th>CPF</th>  
-                    <th>Nivel Funcionario</th>
                     <th>Cargo</th>
                     <th>Telefone</th>
                     <th>Login</th>
@@ -38,13 +37,12 @@ $gc = new GerenteController();
                   </tr>
                 </thead>
 
-                <?php foreach($gc->findAll() as $key=>$value): ?>
+                <?php foreach ($gc->findAll() as $key => $value) : ?>
                     <tbody>
                     <tr>
                     <td><?php echo $value->id; ?></td>
                     <td><?php echo $value->nome; ?></td>
                     <td><?php echo $value->cpf; ?></td>
-                    <td><?php echo $value->nivel_func; ?></td> 
                     <td><?php echo $value->cargo; ?></td>
                     <td><?php echo $value->telefone; ?></td>
                     <td><?php echo $value->login; ?></td>

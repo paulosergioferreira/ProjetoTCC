@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <?php
-require_once'VendedorController.php';
-require_once'autoload.php';
+require_once 'VendedorController.php';
+require_once 'autoload.php';
 $vc = new VendedorController();
 $v = $vc->find($_GET['e']);
 ?>
@@ -25,7 +25,7 @@ $v = $vc->find($_GET['e']);
     <form method="post" action="Save.php">
         <div class="row">
             <div class="col-md-12 mt-4">
-            <input type="number" hidden name="id" value="<?= $c->id ?>">
+            <input type="number" hidden name="id" value="<?= $v->id ?>">
 
                 <div class="card">
                     <h5 class="card-header">Editar dados do Vendedor</h5>
@@ -67,7 +67,7 @@ $v = $vc->find($_GET['e']);
                             <div class="form-group col-3">
                             
                                 <label for="datanasc">Data Nascimento:</label>
-                                <input type="date" id="datanasc" class="form-control" name="datanasc" value=<?php $v->dtnasc?>>
+                                <input type="date" id="datanasc" class="form-control" name="datanasc" value=<?php $v->dtnasc ?>>
                             
                             </div>
                             </div>
@@ -95,12 +95,27 @@ $v = $vc->find($_GET['e']);
                             
                             </div>
                         
-                            <div class="form-group col-7">
+                            <div class="form-group col-5">
 
                             <label for="bairro">Bairro:</label>
                             <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Digite seu bairro" value=<?php $v->bairro ?>>
                         
                            </div>
+
+                           <div class="form-group col-2">
+
+                            <label for="nivel_func">Nivel</label>
+                            <input type="text" id="nivel_func"  maxlength="11" class="form-control" name="nivel_func" value="Usuario">
+
+                            </div>
+
+                            <div class="form-group col-2">
+
+                            <label for="cargo">Cargo</label>
+                            <input type="text" id="cargo"  maxlength="11" class="form-control" name="cargo" value="Vendedor">
+
+                            </div>
+
                       
                            <div class="form-group col-3">
                             
@@ -133,13 +148,13 @@ $v = $vc->find($_GET['e']);
                             
                             </div>
 
-                            <div class="form-group col-5">
+                            <div class="form-group col-2">
 
                                 <label for="cep">CEP:</label>
                                 <input type="text" id="cep"  maxlength="11" class="form-control" name="cep" placeholder="00000-000" value=<?php $v->cep ?>>
 
                             </div>
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
 
                                 <label for="login">Login:</label>
                                 <input type="text" id="login" class="form-control" name="login" value=<?php $v->login ?>>

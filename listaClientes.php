@@ -23,8 +23,8 @@ $cc = new ClienteController();
 <div class="container">
     <div class="row form-cadastro">
         <div class="col-md-12">
-           <table class="table table-hover">
-                <thead>
+           <table class="table table-striped">
+                <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
@@ -41,7 +41,7 @@ $cc = new ClienteController();
                   </tr>
                 </thead>
 
-                <?php foreach($cc->findAll() as $key=>$value): ?>
+                <?php foreach ($cc->findAll() as $key => $value) : ?>
                     <tbody>
                     <tr>
                     <td><?php echo $value->id; ?></td>
@@ -60,7 +60,7 @@ $cc = new ClienteController();
             </table>
         </div>
         <div class="col-md-12">
-            <a href="menu.php" class="btn btn-danger btn-block">Voltar</a>
+            <a href="Menu.php" class="btn btn-danger btn-block">Voltar</a>
         </div>
     </div>
 </div>

@@ -5,17 +5,19 @@
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pesquisar Clientes</title>
+    <title>Pesquisar Venda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
 <body>
 <?php
+include 'VendaController.php';
 include 'ClienteController.php';
+$vc = new VendaController();
 $cc = new ClienteController();
 if (isset($_GET['d']) && $_GET['d'] != null) {
-  $cc->delete($_GET['d']);
+  $vc->delete($_GET['d']);
 }
 
 ?>
@@ -24,19 +26,12 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-10">
+            <div class="form-group col-11">
               <input type="text" name="b" id="b" class="form-control">
             </div>
-            
             <div class="form-group col-1">
-              <input type="submit" class="btn btn-primary" value="Buscar">
+              <input type="submit" class="btn btn-success btn-danger" value="Buscar">
             </div>
-            <div class="form-group col-1">
-              
-            <a href="CadCliente.php" class="btn btn-secondary">Voltar</a>
-                                
-            </div>
-      
         </div>
       </form>
     </div>
@@ -44,31 +39,35 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
 
   <div class="row">
     <div class="col-md-12">
-      <table class="table table-striped">
+      <table class="table table-sm table-hover">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">NOME</th>
-            <th scope="col">RG</th>
-            <th scope="col">CPF</th>
-            <th scope="col">LOGIN</th>
-            <th scope="col">SENHA</th>
+            <th scope="col">COD.VENDA</th>
+            <th scope="col">DESTINO</th>
+            <th scope="col">TRANSPORTE</th>
+            <th scope="col">DIARIA</th>
+            <th scope="col">PAGAMENTO</th>
+            <th scope="col">CLIENTE</th>
+            <th scope="col">PREÇO</th>
            
             
           </tr>
         </thead>
         <tbody>    
         <?php if (isset($_GET['b']) && $_GET['b'] != null) : ?>
-            <?php foreach ($cc->buscarPorNome($_GET['b']) as $clike) : ?>
+
+            <?php foreach ($vc->buscarPorId($_GET['b']) as $clike) : ?>
 
               <?php if ($clike != null) { ?>
                   <tr>
                        <th scope="row"><?= $clike->id ?></th>
-                      <td><?= $clike->nome ?></td>
-                      <td><?= $clike->rg ?></td>
-                      <td><?= $clike->cpf ?></td>
-                      <td><?= $clike->login ?></td>
-                      <td><?= $clike->senha ?></td>
+                      <td><?= $clike->destino ?></td>
+                      <td><?= $clike->transporte ?></td>
+                      <td><?= $clike->diaria ?></td>
+                      <td><?= $clike->tipo ?></td>
+                      <td><?= $cc->find($clike->usuarioId)->nome ?></td>
+                      <td><?= $clike->preco ?></td>
+
                       
                       <td>
                           <a href="EditarCliente.php?e=<?= $clike->id ?>" class="btn btn-primary">Editar</a>
@@ -84,19 +83,21 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
           <?php endforeach; ?>
               <?php else : ?>
                 
-              <?php foreach ($cc->findAll() as $c) : ?>
+              <?php foreach ($vc->findAll() as $v) : ?>
                 <tr>
                     
-                    <th scope="row"><?= $c->id ?></th>
-                    <td><?= $c->nome ?></td>
-                    <td><?= $c->rg ?></td>
-                    <td><?= $c->cpf ?></td>
-                    <td><?= $c->login ?></td>
-                    <td><?= $c->senha ?></td>
-                    
+                    <th scope="row"><?= $v->id ?></th>
+                    <td><?= $v->destino ?></td>
+                    <td><?= $v->transporte ?></td>
+                    <td><?= $v->diaria ?></td>
+                    <td><?= $v->tipo ?></td>
+                    <td><?= $cc->find($v->usuarioId)->nome ?></td>
+                    <td><?= $v->preco ?></td>
+                     
+                 
                     <td>
-                        <a href="EditarCliente.php?e=<?= $c->id ?>" class="btn btn-primary">Editar</a>
-                        <a href="?d=<?= $c->id ?>" class="btn btn-secondary">Deletar</a>
+                        <a href="EditarVenda.php?e=<?= $v->id ?>" class="btn btn-primary">Editar</a>
+                        <a href="?d=<?= $v->id ?>" class="btn btn-secondary">Deletar</a>
                     </td>
                      
 

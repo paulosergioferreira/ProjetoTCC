@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <?php
-require_once'ClienteController.php';
-require_once'autoload.php';
+require_once 'ClienteController.php';
+require_once 'autoload.php';
 $cc = new ClienteController();
 $c = $cc->find($_GET['e']);
 ?>
@@ -13,7 +13,7 @@ $c = $cc->find($_GET['e']);
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadastro de Clientes</title>
+    <title>Editar Cliente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
@@ -28,7 +28,7 @@ $c = $cc->find($_GET['e']);
             <input type="number" hidden name="id" value="<?= $c->id ?>">
 
                 <div class="card">
-                    <h5 class="card-header">Editar dados do Cliente</h5>
+                    <h5 class="card-header">Editar Dados do Cliente</h5>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-3">
@@ -36,7 +36,7 @@ $c = $cc->find($_GET['e']);
 
 
                                 <label for="nome">Nome:</label>
-                                <input type="text" id="nome" class="form-control" name="nome" value=<?php $c->nome ?>>
+                                <input type="text" id="nome" class="form-control" name="nome"  placeholder="Digite seu nome" value=<?php $c->nome ?>>
                             
                             </div>
                             
@@ -67,7 +67,7 @@ $c = $cc->find($_GET['e']);
                             <div class="form-group col-3">
                             
                                 <label for="datanasc">Data Nascimento:</label>
-                                <input type="date" id="datanasc" class="form-control" name="datanasc" value=<?php $c->dtnasc?>>
+                                <input type="date" id="datanasc" class="form-control" name="datanasc" value=<?php $c->dtnasc ?>>
                             
                             </div>
                             </div>

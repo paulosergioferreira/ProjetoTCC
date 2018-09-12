@@ -2,9 +2,9 @@
 
 //Pega as informações inseridas pelos usuarios´p
 
-require_once'Cliente.php';
-require_once'ClienteDAO.php';
-require_once'DB.php';
+require_once 'Cliente.php';
+require_once 'ClienteDAO.php';
+require_once 'DB.php';
 class ClienteController
 {
     private $c;
@@ -17,8 +17,23 @@ class ClienteController
     }
 
     //Pegando os valores inseridos no layout de cadastro que foram trasidos pela classe save e inserindo eles nos setrs.
-    public function insert($nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa, $rua, 
-    $bairro, $cidade, $estado, $cep, $login, $senha, $situacao){
+    public function insert(
+        $nome,
+        $rg,
+        $cpf,
+        $sexo,
+        $dtnasc,
+        $telefone,
+        $numero_casa,
+        $rua,
+        $bairro,
+        $cidade,
+        $estado,
+        $cep,
+        $login,
+        $senha,
+        $situacao
+    ) {
 
         $this->c->setNome($nome);
         $this->c->setRg($rg);
@@ -38,12 +53,28 @@ class ClienteController
        
         //passando os valores como objeto para a classe ClienteDÂO
         $this->cdao->insert($this->c);
-        
+
     }
 
-    public function update($id, $nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa, $rua, 
-    $bairro, $cidade, $estado, $cep, $login, $senha, $situacao){
-       
+    public function update(
+        $id,
+        $nome,
+        $rg,
+        $cpf,
+        $sexo,
+        $dtnasc,
+        $telefone,
+        $numero_casa,
+        $rua,
+        $bairro,
+        $cidade,
+        $estado,
+        $cep,
+        $login,
+        $senha,
+        $situacao
+    ) {
+
         $this->c->setId($id);
         $this->c->setNome($nome);
         $this->c->setRg($rg);
@@ -61,7 +92,7 @@ class ClienteController
         $this->c->setSenha($senha);
         $this->c->setSituacao($situacao);
         $this->cdao->update($this->c);
-      
+
     }
 
     public function findAll()
@@ -69,21 +100,24 @@ class ClienteController
         return $this->cdao->findAll();
     }
 
-   
-    public function buscarPorNome($nome){
-       return $this->cdao->findName($nome);
+
+    public function buscarPorNome($nome)
+    {
+        return $this->cdao->findName($nome);
     }
 
 
-public function find($id){
-    return $this->cdao->find($id);
-}
-
-    public function delete($id){
-      $this->cdao->delete($id);
+    public function find($id)
+    {
+        return $this->cdao->find($id);
     }
 
-   
+    public function delete($id)
+    {
+        $this->cdao->delete($id);
+    }
+
+
 
 }
 
