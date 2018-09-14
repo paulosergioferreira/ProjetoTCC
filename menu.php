@@ -10,31 +10,43 @@
     <script src="main.js"></script>
     <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 </head>
-<ul class="navbar navbar-dark bg-dark" id="pills-tab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="CadCliente.php" role="tab" aria-controls="pills-profile" aria-selected="false">Clientes</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="CadGerente.php" role="tab" aria-controls="pills-contact" aria-selected="false">Gerente</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="CadVendedor.php" role="tab" aria-controls="pills-profile" aria-selected="false">Vendedor</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="listaClientes.php" role="tab" aria-controls="pills-profile" aria-selected="false">Lista Clientes</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="listaGerentes.php" role="tab" aria-controls="pills-contact" aria-selected="false">Lista Gerente</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="listaVendedores.php" role="tab" aria-controls="pills-profile" aria-selected="false">Lista Vendedor</a>
-  </li>
+<body style="background-color: #838B8B;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-</ul>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="CadCliente.php">Cadastro de Clientes<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listaClientes.php">Lista de Clientes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="CadGerente.php">Cadastro de Gerentes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listaGerentes.php">Lista de Gerentes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="CadVenda.php">Cadastro de Vendas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listaVendas.php">Lista de Vendas</a>
+      </li>
 
+
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
 </body>
 </html>

@@ -18,7 +18,7 @@ class VendaController
     }
 
     //Pegando os valores inseridos no layout de cadastro que foram trasidos pela classe save e inserindo eles nos setrs.
-    public function insert($destino, $preco, $transporte, $nivelHotel, $translado, $descricao, $diaria, $tipo, $usuarioId)
+    public function insert($destino, $preco, $transporte, $nivelHotel, $translado, $descricao, $diaria, $tipo, $clienteId)
     {
 
         $this->vc->setDestino($destino);
@@ -29,7 +29,7 @@ class VendaController
         $this->vc->setDescricao($descricao);
         $this->vc->setDiaria($diaria);
         $this->vc->setTipo($tipo);
-        $this->vc->setUsuarioId($usuarioId);
+        $this->vc->setClienteId($clienteId);
          
        
         //passando os valores como objeto para a classe ClienteDÂO
@@ -37,7 +37,7 @@ class VendaController
 
     }
 
-    public function update($id, $destino, $preco, $transporte, $nivelHotel, $translado, $descricao, $diaria, $tipo, $usuarioId)
+    public function update($id, $destino, $preco, $transporte, $nivelHotel, $translado, $descricao, $diaria, $tipo, $clienteId)
     {
 
         $this->vc->setId($id);
@@ -49,7 +49,7 @@ class VendaController
         $this->vc->setDescricao($descricao);
         $this->vc->setDiaria($diaria);
         $this->vc->setTipo($tipo);
-        $this->vc->setUsuarioId($usuarioId);
+        $this->vc->setClienteId($clienteId);
         $this->vcdao->update($this->vc);
 
     }
@@ -62,7 +62,7 @@ class VendaController
 
     public function buscarPoriD($usuarioId)
     {
-        return $this->vcdao->findId($usuarioId);
+        return $this->vcdao->findId($clienteId);
     }
 
     public function buscarPorNome($nome)

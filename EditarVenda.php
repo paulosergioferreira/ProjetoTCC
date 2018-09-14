@@ -1,7 +1,10 @@
 <?php require_once 'ClienteController.php'; ?>
+<?php require_once 'VendaController.php'; ?>
+
 
 <?php
 $vc = new VendaController();
+$cc = new ClienteController();
 $v = $vc->find($_GET['e']);
 ?>
 
@@ -11,6 +14,8 @@ $v = $vc->find($_GET['e']);
     <form method="post" action="Save.php">
         <div class="row">
             <div class="col-md-12 mt-4">
+            <input type="number" hidden name="id" value="<?= $v->id ?>">
+
                 <input type="number" name="estado" value="1" hidden>
 
                 <div class="card">
@@ -18,13 +23,15 @@ $v = $vc->find($_GET['e']);
                     
 
                         <div class="form-row">
+                      
                             <div class="form-group col-5">
                                 <label for="clienteId">Cliente:</label>
                                 <select name="clienteId" id="clienteId" class="form-control">
-                                    <?php foreach ($cc->findAll() as $cliente) : ?>
-                                    
-                                        <option selectd></option>
-                                        <option value="<?= $cliente->id ?>"> <?= $cliente->nome ?></option>
+                                
+                                    <?php foreach ($cc->findAll() as $c) : ?>
+                                        <option></option>
+                                        <option value="<?= $c->id ?>"> <?= $c->nome ?></option>
+
                                     <?php endforeach; ?>
                                 </select>
                         </div>
@@ -96,7 +103,7 @@ $v = $vc->find($_GET['e']);
                             <input type="hidden" id="preco" class="form-control" name="preco">
                             
                        
-                    <input type="submit" name="comprar" value="Confirmar compra" class="btn btn-primary">
+                    <input type="submit" name="editarVenda" value="Editar compra" class="btn btn-primary">
                     </div>
 </div>
     </form>

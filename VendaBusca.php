@@ -26,11 +26,14 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-11">
+            <div class="form-group col-10">
               <input type="text" name="b" id="b" class="form-control">
             </div>
             <div class="form-group col-1">
               <input type="submit" class="btn btn-success btn-danger" value="Buscar">
+            </div>
+            <div class="form-group col-1">
+              <a href="Menu.php" class="btn btn-secondary" >Voltar</a>
             </div>
         </div>
       </form>

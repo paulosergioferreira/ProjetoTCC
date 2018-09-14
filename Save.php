@@ -410,8 +410,274 @@ if (isset($_POST['comprar'])) {
         $_POST['tipo'],
         $_POST['clienteId']
     );
-require_once'listaVendas.php';
+    require_once 'listaVendas.php';
 }
+
+if (isset($_POST['editarVenda'])) {
+
+
+    $destino = $_POST['destino'];
+    $translado = $_POST['translado'];
+    $diaria = $_POST['diaria'];
+    if ($destino == "Pernambuco" && $_POST['nivelHotel'] == 1) {
+        $valor = 100 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Pernambuco" && $_POST['nivelHotel'] == 2) {
+        $valor = 150 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Pernambuco" && $_POST['nivelHotel'] == 3) {
+        $valor = 200 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Pernambuco" && $_POST['nivelHotel'] == 4) {
+        $valor = 250 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Pernambuco" && $_POST['nivelHotel'] == 5) {
+        $valor = 300 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Paraiba" && $_POST['nivelHotel'] == 1) {
+        $valor = 200 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Paraiba" && $_POST['nivelHotel'] == 2) {
+        $valor = 250 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Paraiba" && $_POST['nivelHotel'] == 3) {
+        $valor = 300 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Paraiba" && $_POST['nivelHotel'] == 4) {
+        $valor = 450 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Paraiba" && $_POST['nivelHotel'] == 5) {
+        $valor = 500 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 1) {
+        $valor = 300 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 2) {
+        $valor = 450 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 3) {
+        $valor = 500 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 4) {
+        $valor = 650 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio de Janeiro" && $_POST['nivelHotel'] == 5) {
+        $valor = 700 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 1) {
+        $valor = 400 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 2) {
+        $valor = 550 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 3) {
+        $valor = 600 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 4) {
+        $valor = 750 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Rio grande do Sul" && $_POST['nivelHotel'] == 5) {
+        $valor = 800 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Amazonas" && $_POST['nivelHotel'] == 1) {
+        $valor = 500 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Amazonas" && $_POST['nivelHotel'] == 2) {
+        $valor = 650 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Amazonas" && $_POST['nivelHotel'] == 3) {
+        $valor = 700 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Amazonas" && $_POST['nivelHotel'] == 4) {
+        $valor = 850 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "Amazonas" && $_POST['nivelHotel'] == 5) {
+        $valor = 900 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "São Paulo" && $_POST['nivelHotel'] == 1) {
+        $valor = 600 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "São Paulo" && $_POST['nivelHotel'] == 2) {
+        $valor = 750 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "São Paulo" && $_POST['nivelHotel'] == 3) {
+        $valor = 800 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "São Paulo" && $_POST['nivelHotel'] == 4) {
+        $valor = 950 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    } else if ($destino == "São Paulo" && $_POST['nivelHotel'] == 5) {
+        $valor = 1100 * $diaria;
+        if ($translado == 1) {
+
+            $valor = $valor * 2;
+        }
+        $_POST['preco'] = $valor;
+
+    }
+
+
+    $vc->update(
+
+        $_POST['id'],
+        $_POST['destino'],
+        $_POST['preco'],
+        $_POST['transporte'],
+        $_POST['nivelHotel'],
+        $_POST['translado'],
+        $_POST['descricao'],
+        $_POST['diaria'],
+        $_POST['tipo'],
+        $_POST['clienteId']
+    );
+    require_once 'listaVendas.php';
+}
+
 
 
 

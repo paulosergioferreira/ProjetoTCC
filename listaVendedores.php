@@ -22,9 +22,9 @@ $vc = new VendedorController();
 <div class="container">
     <div class="row form-cadastro">
         <div class="col-md-12">
-           <table class="table table-hover">
-                <thead>
-                <tr>
+        <table class="table table-striped">
+        <thead class="thead-dark">
+           <tr>
                     <th>ID</th>
                     <th>Nome</th>
                     <th>CPF</th>  

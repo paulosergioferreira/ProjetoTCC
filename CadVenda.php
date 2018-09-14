@@ -97,6 +97,9 @@ $cc = new ClienteController();
                             
                        
                     <input type="submit" name="comprar" value="Confirmar compra" class="btn btn-primary">
+                    <a href="menu.php" class="btn btn-secondary" >Voltar</a>
+          
+          
                     </div>
 </div>
     </form>
