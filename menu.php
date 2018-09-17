@@ -20,24 +20,29 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="CadCliente.php">Cadastro de Clientes<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="CadCliente.php">Cadastro Cliente<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listaClientes.php">Lista de Clientes</a>
+        <a class="nav-link" href="listaClientes.php">Lista Cliente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="CadGerente.php">Cadastro de Gerentes</a>
+        <a class="nav-link" href="CadGerente.php">Cadastro Gerente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listaGerentes.php">Lista de Gerentes</a>
+        <a class="nav-link" href="listaGerentes.php">Lista Gerente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="CadVenda.php">Cadastro de Vendas</a>
+        <a class="nav-link" href="CadVenda.php">Cadastro Venda</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listaVendas.php">Lista de Vendas</a>
+        <a class="nav-link" href="listaVendas.php">Lista Venda</a>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link" href="CadVendedor.php">Cadastro Vendedor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listaVendedores.php">Lista Vendedor</a>
+      </li>
 
 
     </ul>

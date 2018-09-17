@@ -58,7 +58,7 @@ $cc = new ClienteController();
             </table>
         </div>
         <div class="col-md-12">
-            <a href="Menu.php" class="btn btn-danger btn-block">Voltar</a>
+            <a href="Menu.php" class="btn btn-secondary btn-block">Voltar</a>
         </div>
     </div>
 </div>

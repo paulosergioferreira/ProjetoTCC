@@ -36,7 +36,7 @@
           </div>
         </div>
     <input type="submit" name="Acessar" class="btn btn-primary" value="Acessar">
-    <a href="CadCliente.php" class="btn btn-danger">Cadastra-se</a>
+    <a href="CadCliente.php" class="btn btn-secondary">Cadastra-se</a>
  </div>
  <div class="col-md-3"></div>
  </div>  

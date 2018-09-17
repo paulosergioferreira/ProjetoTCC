@@ -56,7 +56,7 @@ $vc = new VendedorController();
             </table>
         </div>
         <div class="col-md-12">
-            <a href="menu.php" class="btn btn-danger btn-block">Voltar</a>
+            <a href="menu.php" class="btn btn-secondary btn-block">Voltar</a>
         </div>
     </div>
 </div>
