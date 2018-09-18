@@ -12,8 +12,8 @@
 </head>
 <body>
 <?php
-include 'VendaController.php';
-include 'ClienteController.php';
+require_once'../controller/VendaController.php';
+require_once'../controller/ClienteController.php';
 $vc = new VendaController();
 $cc = new ClienteController();
 if (isset($_GET['d']) && $_GET['d'] != null) {
@@ -73,7 +73,7 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
 
                       
                       <td>
-                          <a href="EditarCliente.php?e=<?= $clike->id ?>" class="btn btn-primary">Editar</a>
+                          <a href="EditarVenda.php?e=<?= $clike->id ?>" class="btn btn-primary">Editar</a>
                           <a href="?d=<?= $clike->id ?>" class="btn btn-secondary">Deletar</a>
                       </td>
                       

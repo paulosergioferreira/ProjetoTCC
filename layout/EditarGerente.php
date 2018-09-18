@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <?php
-require_once'GerenteController.php';
-require_once'autoload.php';
+require_once'../controller/GerenteController.php';
+
 $gc = new GerenteController();
 $g = $gc->find($_GET['e']);
 ?>
@@ -22,7 +22,7 @@ $g = $gc->find($_GET['e']);
 
 
 <div class="container">
-    <form method="post" action="Save.php">
+    <form method="post" action="../Models/Save.php">
         <div class="row">
             <div class="col-md-12 mt-5">
             <input type="number" hidden name="id" value="<?= $g->id ?>">

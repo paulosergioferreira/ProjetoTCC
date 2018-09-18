@@ -1,37 +1,33 @@
-<?php require_once 'ClienteController.php'; ?>
-<?php require_once 'VendaController.php'; ?>
+<?php require_once '../controller/ClienteController.php'; 
+require_once '../Models/Save.php';
 
+?>
 
 <?php
-$vc = new VendaController();
 $cc = new ClienteController();
-$v = $vc->find($_GET['e']);
+
 ?>
 
 <div class="container">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <form method="post" action="Save.php">
+    <form method="post" action="../Models/Save.php">
         <div class="row">
             <div class="col-md-12 mt-4">
-            <input type="number" hidden name="id" value="<?= $v->id ?>">
-
                 <input type="number" name="estado" value="1" hidden>
 
                 <div class="card">
-                    <h5 class="card-header">Editar Viagem</h5>
+                    <h5 class="card-header">Compra da Viagem</h5>
                     
 
                         <div class="form-row">
-                      
                             <div class="form-group col-5">
                                 <label for="clienteId">Cliente:</label>
                                 <select name="clienteId" id="clienteId" class="form-control">
-                                
-                                    <?php foreach ($cc->findAll() as $c) : ?>
-                                        <option></option>
-                                        <option value="<?= $c->id ?>"> <?= $c->nome ?></option>
-
+                                    <?php foreach ($cc->findAll() as $cliente) : ?>
+                                    
+                                        <option selectd></option>
+                                        <option value="<?= $cliente->id ?>"> <?= $cliente->nome ?></option>
                                     <?php endforeach; ?>
                                 </select>
                         </div>
@@ -103,7 +99,11 @@ $v = $vc->find($_GET['e']);
                             <input type="hidden" id="preco" class="form-control" name="preco">
                             
                        
-                    <input type="submit" name="editarVenda" value="Editar compra" class="btn btn-primary">
+                    <input type="submit" name="comprar" value="Confirmar compra" class="btn btn-primary">
+                    <a href="../layout/VendaBusca.php" class="btn btn-red">Buscar Venda</a>
+                    <a href="menu.php" class="btn btn-secondary" >Voltar</a>
+          
+          
                     </div>
 </div>
     </form>

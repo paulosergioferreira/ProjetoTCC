@@ -2,9 +2,9 @@
 
 //Pega as informações inseridas pelos usuarios´p
 
-require_once 'VendaCliente.php';
-require_once 'VendaDAO.php';
-require_once 'DB.php';
+require_once '../Models/VendaCliente.php';
+require_once '../DAO/VendaDAO.php';
+require_once '../lib/DB.php';
 
 class VendaController
 {
@@ -60,7 +60,7 @@ class VendaController
     }
 
 
-    public function buscarPoriD($usuarioId)
+    public function buscarPoriD($clienteId)
     {
         return $this->vcdao->findId($clienteId);
     }

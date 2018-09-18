@@ -2,9 +2,9 @@
 
 //Pega as informações inseridas pelos usuarios´p
 
-require_once 'Vendedor.php';
-require_once 'VendedorDAO.php';
-require_once 'DB.php';
+require_once '../Models/Vendedor.php';
+require_once '../DAO/VendedorDAO.php';
+require_once '../lib/DB.php';
 class VendedorController
 {
     private $v;

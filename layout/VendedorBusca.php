@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-include 'VendedorController.php';
+require_once'../controller/VendedorController.php';
 $vc = new VendedorController();
 if (isset($_GET['d']) && $_GET['d'] != null) {
   $vc->delete($_GET['d']);

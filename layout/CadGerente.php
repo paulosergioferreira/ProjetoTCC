@@ -5,20 +5,20 @@
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadastro de Vendedor</title>
+    <title>Cadastro de Gerente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
 <body>
 
-<php? require_once'DAO/ClienteDAO.php';?>
+<php? require_once'../DAO/ClienteDAO.php';?>
 <div class="container">
-    <form method="post" action="Save.php">
+    <form method="post" action="../Models/Save.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
-                    <h5 class="card-header">Cadastro de Vendedores</h5>
+                    <h5 class="card-header">Cadastro de Gerentes</h5>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-4">
@@ -71,7 +71,7 @@
                             <div class="form-group col-2">
                             
                                 <label for="numero_casa">N° da casa:</label>
-                                <input type="text" id="numero_casa" class="form-control" name="numero_casa" placeholder="Digite n° da Casa">
+                                <input type="text" id="numero_casa" class="form-control" name="numero_casa">
                             
                             </div>
 
@@ -103,7 +103,7 @@
                             
                             <label for="situacao">Cargo:</label>
                                 <select name="cargo" id="cargo" class="form-control">
-                                    <option value="vendedor">Vendedor</option>
+                                    <option value="1">Gerente</option>
                                 </select>
                             
                             </div>
@@ -124,7 +124,7 @@
                              <div class="form-group col-3">
 
                                 <label for="nivel_func">Nivel</label>
-                                <input type="text" id="nivel_func"  maxlength="11" class="form-control" name="nivel_func" value="Usuario">
+                                <input type="text" id="nivel_func"  maxlength="11" class="form-control" name="nivel_func" value="Administrador">
 
                             </div>
 
@@ -150,9 +150,9 @@
 
                             </div>
 
-                            <input type="submit" class="btn btn-primary" name="salvandoVendedor" id="salvandoVendedor" value="Salvar"/>
-                            <a href="VendedorBusca.php" class="btn btn-secondary">Buscar Vendedor</a>
-                            <a href="Menu.php" class="btn btn-danger">Voltar ao  Menu</a>
+                            <input type="submit" class="btn btn-primary" name="salvandoGerente" id="salvar" value="Salvar"/>
+                            <a href="GerenteBusca.php" class="btn btn-secondary">Buscar Gerente</a>
+                            <a href="Menu.php" class="btn btn-danger">Voltar ao Menu</a>
                             
                     </div>
                 </div>

@@ -2,9 +2,9 @@
 
 //Pega as informações inseridas pelos usuarios´p
 
-require_once 'Gerente.php';
-require_once 'GerenteDAO.php';
-require_once 'DB.php';
+require_once '../Models/Gerente.php';
+require_once '../DAO/GerenteDAO.php';
+require_once '../lib/DB.php';
 class GerenteController
 {
     private $g;

@@ -2,9 +2,9 @@
 
 //Pega as informações inseridas pelos usuarios´p
 
-require_once 'Cliente.php';
-require_once 'ClienteDAO.php';
-require_once 'DB.php';
+require_once '../Models/Cliente.php';
+require_once '../DAO/ClienteDAO.php';
+require_once '../lib/DB.php';
 class ClienteController
 {
     private $c;

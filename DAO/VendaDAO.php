@@ -1,8 +1,8 @@
 <?php
 
 
-require_once 'Model.php';
-require_once 'DB.php';
+require_once '../Models/Model.php';
+require_once '../lib/DB.php';
 
 //Classe DAO onde contem as funções de CRUD
 class VendaDAO extends Model

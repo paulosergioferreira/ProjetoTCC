@@ -13,10 +13,10 @@
 </head>
 <body>
 
-<php? require_once'ClienteDAO.php';?>
+<?php require_once'../DAO/ClienteDAO.php';?>
     
     <div class="container">
-        <form method="post" action="Save.php">
+        <form method="post" action="../Models/Save.php">
             <div class="row">
                 <div class="col-md-12 mt-4">
                     <div class="card">

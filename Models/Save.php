@@ -1,9 +1,9 @@
 <?php
 
-require_once 'GerenteController.php';
-require_once 'ClienteController.php';
-require_once 'VendedorController.php';
-require_once 'VendaController.php';
+require_once '../controller/GerenteController.php';
+require_once '../controller/ClienteController.php';
+require_once '../controller/VendedorController.php';
+require_once '../controller/VendaController.php';
 $c = new ClienteController();
 $g = new GerenteController();
 $v = new VendedorController();
@@ -27,7 +27,7 @@ if (isset($_POST['salvandoCliente'])) {
         $_POST['senha'],
         $_POST['situacao']
     );
-    require_once 'listaClientes.php';
+    require_once '../layout/listaClientes.php';
 }
 
 if (isset($_POST['editarCliente'])) {
@@ -49,7 +49,7 @@ if (isset($_POST['editarCliente'])) {
         $_POST['senha'],
         $_POST['situacao']
     );
-    require_once 'listaClientes.php';
+    require_once '../layout/listaClientes.php';
 }
 
 
@@ -72,7 +72,7 @@ if (isset($_POST['salvandoGerente'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once 'listaGerentes.php';
+    require_once '../layout/listaGerentes.php';
 }
 
 if (isset($_POST['editarGerente'])) {
@@ -95,7 +95,7 @@ if (isset($_POST['editarGerente'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once 'listaGerentes.php';
+    require_once '../layout/listaGerentes.php';
 
 }
 
@@ -118,7 +118,7 @@ if (isset($_POST['salvandoVendedor'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once 'listaVendedores.php';
+    require_once '../layout/listaVendedores.php';
 }
 
 if (isset($_POST['editarVendedor'])) {
@@ -141,7 +141,7 @@ if (isset($_POST['editarVendedor'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once 'listaVendedores.php';
+    require_once '../layout/listaVendedores.php';
 
 }
 
@@ -410,7 +410,7 @@ if (isset($_POST['comprar'])) {
         $_POST['tipo'],
         $_POST['clienteId']
     );
-    require_once 'listaVendas.php';
+    require_once '../layout/listaVendas.php';
 }
 
 if (isset($_POST['editarVenda'])) {
@@ -675,7 +675,7 @@ if (isset($_POST['editarVenda'])) {
         $_POST['tipo'],
         $_POST['clienteId']
     );
-    require_once 'listaVendas.php';
+    require_once '../layout/listaVendas.php';
 }
 
 
