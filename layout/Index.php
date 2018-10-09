@@ -9,16 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <?php require_once '../controller/clienteController.php';
+    $cc = new ClienteController();
+    ?>
+                
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 
-<form>
 <div class="container">
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
+                
+
+<?php
+if (isset($_POST['Acessar']) && $_POST['login'] != null && $_POST['senha'] != null) {
+
+    header("location: ../layout/menu.php");
+
+
+}
+
+?>
+
+  
+
+
+
     
-      <form method="post" class="form-login" action="acesso.php">
+      <form method="post" class="form-login">
       <div class="form-row">
           <div class="form-group col-12"></br></br></br></br></br>
           
@@ -35,7 +54,7 @@
             <input type="password" class="form-control" id="senha" name="senha" placeholder="Entre com sua senha">
           </div>
         </div>
-    <input type="submit" name="Acessar" class="btn btn-primary" value="Acessar">
+    <input type="submit" name="Acessar" id="Acessar" class="btn btn-primary" value="Acessar">
     <a href="CadCliente.php" class="btn btn-secondary">Cadastra-se</a>
  </div>
  <div class="col-md-3"></div>

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <?php
 require_once'../controller/VendedorController.php';
 $vc = new VendedorController();
@@ -23,17 +23,12 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-10">
+            <div class="form-group col-11">
               <input type="text" name="b" id="b" class="form-control">
             </div>
             <div class="form-group col-1">
               <input type="submit" class="btn btn-primary" value="Buscar">
             </div>
-            <div class="form-group col-1">
-       
-            <a href="CadVendedor.php" class="btn btn-secondary" >Voltar</a>
-          
-           </div>
          
 
         </div>
@@ -49,9 +44,9 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
             <th scope="col">NOME</th>
             <th scope="col">RG</th>
             <th scope="col">CPF</th>
+            <th scope="col">TELEFONE</th>
             <th scope="col">LOGIN</th>
-            <th scope="col">SENHA</th>
-          
+           
             
           </tr>
         </thead>
@@ -65,9 +60,9 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                       <td><?= $vlike->nome ?></td>
                       <td><?= $vlike->rg ?></td>
                       <td><?= $vlike->cpf ?></td>
+                      <td><?= $vlike->telefone ?></td>
                       <td><?= $vlike->login ?></td>
-                      <td><?= $vlike->senha ?></td>
-                  
+                     
                       
                       <td>
                           <a href="EditarVendedor.php?e=<?= $vlike->id ?>" class="btn btn-primary">Editar</a>
@@ -90,8 +85,8 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                     <td><?= $v->nome ?></td>
                     <td><?= $v->rg ?></td>
                     <td><?= $v->cpf ?></td>
+                    <td><?= $v->telefone ?></td>
                     <td><?= $v->login ?></td>
-                    <td><?= $v->senha ?></td>
                     <td>
                         <a href="EditarVendedor.php?e=<?= $v->id ?>" class="btn btn-primary">Editar</a>
                         <a href="?d=<?= $v->id?>" class="btn btn-secondary" >Deletar</a>
@@ -103,6 +98,9 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
         <?php endif; ?>
         </tbody>
       </table>
+        <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+        <a href="../layout/CadVendedor.php" class="btn btn-secondary btn-block">Cadastrar Vendedores</a>        
+    
     </div>
   </div>
 </div>

@@ -10,9 +10,10 @@
     <script src="main.js"></script>
     <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 </head>
-<body style="background-color: #838B8B;">
+<body style="background-color: #DCDCDC;">
+<div class="p-3 mb-2 bg-primary text-white">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Home</a>
+  <a href="#" class="btn btn-secondary">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,28 +21,28 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="CadCliente.php">Cadastro Cliente<span class="sr-only">(current)</span></a>
+        <a  href="CadCliente.php" class="btn btn-secondary">Cad. Cliente<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listaClientes.php">Lista Cliente</a>
+        <a href="listaClientes.php" class="btn btn-secondary">Lista Cliente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="CadGerente.php">Cadastro Gerente</a>
+        <a  href="CadGerente.php" class="btn btn-secondary">Cad. Gerente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listaGerentes.php">Lista Gerente</a>
+        <a  href="listaGerentes.php" class="btn btn-secondary">Lista Gerente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="CadVenda.php">Cadastro Venda</a>
+        <a  href="CadVenda.php" class="btn btn-secondary">Cad. Venda</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listaVendas.php">Lista Venda</a>
+        <a  href="listaVendas.php" class="btn btn-secondary">Lista Venda</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="CadVendedor.php">Cadastro Vendedor</a>
+        <a  href="CadVendedor.php" class="btn btn-secondary">Cad. Vendedor</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listaVendedores.php">Lista Vendedor</a>
+        <a  href="listaVendedores.php" class="btn btn-secondary">Lista Vendedor</a>
       </li>
 
 
@@ -52,6 +53,6 @@
     </form>
   </div>
 </nav>
-
+</div>
 </body>
 </html>

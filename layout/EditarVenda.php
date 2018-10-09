@@ -27,10 +27,10 @@ $v = $vc->find($_GET['e']);
                             <div class="form-group col-5">
                                 <label for="clienteId">Cliente:</label>
                                 <select name="clienteId" id="clienteId" class="form-control">
-                                
+                                <option></option>
+                                      
                                     <?php foreach ($cc->findAll() as $c) : ?>
-                                        <option></option>
-                                        <option value="<?= $c->id ?>"> <?= $c->nome ?></option>
+                                       <option value="<?= $c->id ?>"> <?= $c->nome ?></option>
 
                                     <?php endforeach; ?>
                                 </select>
@@ -104,6 +104,8 @@ $v = $vc->find($_GET['e']);
                             
                        
                     <input type="submit" name="editarVenda" value="Editar compra" class="btn btn-primary">
+                    <a href="Menu.php" class="btn btn-secondary">Cancelar Edição</a>
+                         
                     </div>
 </div>
     </form>

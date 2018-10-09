@@ -18,7 +18,7 @@ $gc = new GerenteController();
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <div class="container">
     <div class="row form-cadastro">
         <div class="col-md-12">
@@ -27,11 +27,12 @@ $gc = new GerenteController();
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>RG</th>
                     <th>CPF</th>  
                     <th>Cargo</th>
+                    <th>Dt.Nasc</th>
                     <th>Telefone</th>
                     <th>Login</th>
-                    <th>Senha</th>
                   
                     
                   </tr>
@@ -42,11 +43,12 @@ $gc = new GerenteController();
                     <tr>
                     <td><?php echo $value->id; ?></td>
                     <td><?php echo $value->nome; ?></td>
+                    <td><?php echo $value->rg; ?></td>
                     <td><?php echo $value->cpf; ?></td>
                     <td><?php echo $value->cargo; ?></td>
+                    <td><?php echo $value->dtnasc; ?></td>
                     <td><?php echo $value->telefone; ?></td>
                     <td><?php echo $value->login; ?></td>
-                    <td><?php echo $value->senha; ?></td>
                        
                     </tr>
                     </tbody>
@@ -54,8 +56,9 @@ $gc = new GerenteController();
             </table>
         </div>
         <div class="col-md-12">
-            <a href="../layout/menu.php" class="btn btn-secondary btn-block">Voltar</a>
-        </div>
+             <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+             <a href="../layout/CadGerente.php" class="btn btn-secondary btn-block">Cadastrar Gerente</a>        
+         </div>
     </div>
 </div>
 </table>                    

@@ -27,7 +27,7 @@ if (isset($_POST['salvandoCliente'])) {
         $_POST['senha'],
         $_POST['situacao']
     );
-    require_once '../layout/listaClientes.php';
+    header('location: ../layout/listaClientes.php');
 }
 
 if (isset($_POST['editarCliente'])) {
@@ -49,7 +49,8 @@ if (isset($_POST['editarCliente'])) {
         $_POST['senha'],
         $_POST['situacao']
     );
-    require_once '../layout/listaClientes.php';
+    header('location: ../layout/listaClientes.php');
+
 }
 
 
@@ -72,7 +73,7 @@ if (isset($_POST['salvandoGerente'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once '../layout/listaGerentes.php';
+    header('location: ../layout/listaGerentes.php');
 }
 
 if (isset($_POST['editarGerente'])) {
@@ -95,7 +96,7 @@ if (isset($_POST['editarGerente'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once '../layout/listaGerentes.php';
+    header('location: ../layout/listaGerentes.php');
 
 }
 
@@ -118,7 +119,8 @@ if (isset($_POST['salvandoVendedor'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once '../layout/listaVendedores.php';
+    header('location: ../layout/listaVendedores.php');
+
 }
 
 if (isset($_POST['editarVendedor'])) {
@@ -141,7 +143,7 @@ if (isset($_POST['editarVendedor'])) {
         $_POST['nivel_func'],
         $_POST['cargo']
     );
-    require_once '../layout/listaVendedores.php';
+    header('location: ../layout/listaVendedores.php');
 
 }
 
@@ -410,7 +412,9 @@ if (isset($_POST['comprar'])) {
         $_POST['tipo'],
         $_POST['clienteId']
     );
-    require_once '../layout/listaVendas.php';
+
+    header('location: ../layout/listaVendas.php');
+
 }
 
 if (isset($_POST['editarVenda'])) {
@@ -675,8 +679,10 @@ if (isset($_POST['editarVenda'])) {
         $_POST['tipo'],
         $_POST['clienteId']
     );
-    require_once '../layout/listaVendas.php';
+    header('location: ../layout/listaVendas.php');
+    
 }
+
 
 
 

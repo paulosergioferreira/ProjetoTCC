@@ -21,7 +21,7 @@ $cc = new ClienteController();
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <div class="container">
     <div class="row form-cadastro">
         <div class="col-md-12">
@@ -58,8 +58,9 @@ $cc = new ClienteController();
             </table>
         </div>
         <div class="col-md-12">
-            <a href="../layout/Menu.php" class="btn btn-secondary btn-block">Voltar</a>
-        </div>
+            <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+            <a href="../layout/CadVenda.php" class="btn btn-secondary btn-block">Cadastrar Vendas</a>        
+       </div>
     </div>
 </div>
 </table>

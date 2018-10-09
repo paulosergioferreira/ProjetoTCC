@@ -68,7 +68,7 @@ class ClienteDAO extends Model
 
     public function findName($nome)
     {
-        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NOME LIKE ?/* OR CPF LIKE ?*/");
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NOME LIKE ?");
         $stmt->bindValue(1, "%" . $nome . "%");
         $stmt->execute();
         return $stmt->fetchAll();

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <?php
 require_once'../controller/GerenteController.php';
 $gc = new GerenteController();
@@ -23,19 +23,13 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-10">
+            <div class="form-group col-11">
               <input type="text" name="b" id="b" class="form-control">
             </div>
             <div class="form-group col-1">
               <input type="submit" class="btn btn-primary" value="Buscar">
             </div>
-            <div class="form-group col-1">
-       
-            <a href="../layout/CadGerente.php" class="btn btn-secondary" >Voltar</a>
-          
-           </div>
          
-
         </div>
       </form>
     </div>
@@ -49,8 +43,8 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
             <th scope="col">NOME</th>
             <th scope="col">RG</th>
             <th scope="col">CPF</th>
+            <th scope="col">TELEFONE</th>
             <th scope="col">LOGIN</th>
-            <th scope="col">SENHA</th>
            
             
           </tr>
@@ -65,9 +59,9 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                       <td><?= $clike->nome ?></td>
                       <td><?= $clike->rg ?></td>
                       <td><?= $clike->cpf ?></td>
+                      <td><?= $clike->telefone ?></td>
                       <td><?= $clike->login ?></td>
-                      <td><?= $clike->senha ?></td>
-                      
+                     
                       <td>
                           <a href="../layout/EditarGerente.php?e=<?= $clike->id ?>" class="btn btn-primary">Editar</a>
                           <a href="?d=<?= $clike->id ?>"class="btn btn-secondary" >Deletar</a>
@@ -89,8 +83,8 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                     <td><?= $g->nome ?></td>
                     <td><?= $g->rg ?></td>
                     <td><?= $g->cpf ?></td>
+                    <td><?= $g->telefone ?></td>
                     <td><?= $g->login ?></td>
-                    <td><?= $g->senha ?></td>
                     <td>
                         <a href="../layout/EditarGerente.php?e=<?= $g->id ?>" class="btn btn-primary">Editar</a>
                         <a href="?d=<?= $g->id ?>" class="btn btn-secondary" >Deletar</a>
@@ -102,6 +96,9 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
         <?php endif; ?>
         </tbody>
       </table>
+        <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+        <a href="../layout/CadGerente.php" class="btn btn-secondary btn-block">Cadastrar Gerentes</a>        
+     
     </div>
   </div>
 </div>

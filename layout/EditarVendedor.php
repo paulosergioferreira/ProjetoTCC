@@ -18,7 +18,7 @@ $v = $vc->find($_GET['e']);
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 
 
 <div class="container">
@@ -36,21 +36,21 @@ $v = $vc->find($_GET['e']);
 
 
                                 <label for="nome">Nome:</label>
-                                <input type="text" id="nome" class="form-control" name="nome" value=<?php $v->nome ?>>
+                                <input type="text" id="nome" class="form-control" name="nome" placeholder="Digite seu Nome" value=<?php $v->nome ?>>
                             
                             </div>
                             
                             <div class="form-group col-2">
                             
                                 <label for="rg">RG:</label>
-                                <input type="text" id="rg" class="form-control" name="rg" value=<?php $v->rg ?>>
+                                <input type="text" id="rg" class="form-control" name="rg" placeholder="000.000.00" value=<?php $v->rg ?>>
                             
                             </div>
 
                             <div class="form-group col-2">
                             
                                 <label for="cpf">CPF:</label>
-                                <input type="text" id="cpf" class="form-control" name="cpf" value=<?php $v->cpf ?>>
+                                <input type="text" id="cpf" class="form-control" name="cpf" placeholder="000.000.000-00" value=<?php $v->cpf ?>>
                             
                             </div>
 
@@ -83,7 +83,7 @@ $v = $vc->find($_GET['e']);
                             <div class="form-group col-2">
                             
                                 <label for="numero_casa">N° da casa:</label>
-                                <input type="number" id="numero_casa" class="form-control" name="numero_casa" value=<?php $v->numero_casa ?>>
+                                <input type="number" id="numero_casa" class="form-control" name="numero_casa" placeholder="Digite o n° Casa" value=<?php $v->numero_casa ?>>
                             
                             </div>
 
@@ -91,37 +91,57 @@ $v = $vc->find($_GET['e']);
                             <div class="form-group col-7">
                             
                                 <label for="rua">Rua:</label>
-                                <input type="text" id="rua"  class="form-control" name="rua" placeholder="Digite sua rua" value=<?php $v->rua ?>>
+                                <input type="text" id="rua"  class="form-control" name="rua" placeholder="Digite sua Rua" value=<?php $v->rua ?>>
                             
                             </div>
                         
                             <div class="form-group col-5">
 
                             <label for="bairro">Bairro:</label>
-                            <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Digite seu bairro" value=<?php $v->bairro ?>>
+                            <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Digite seu Bairro" value=<?php $v->bairro ?>>
                         
                            </div>
 
                            <div class="form-group col-2">
 
                             <label for="nivel_func">Nivel</label>
-                            <input type="text" id="nivel_func"  maxlength="11" class="form-control" name="nivel_func" value="Usuario">
-
+                            <select name="nivel_func" id="nivel_func" class="form-control">
+                                    <option value="usuario">Usuario</option>
+                                </select>
                             </div>
 
                             <div class="form-group col-2">
 
                             <label for="cargo">Cargo</label>
-                            <input type="text" id="cargo"  maxlength="11" class="form-control" name="cargo" value="Vendedor">
-
+                            <select name="cargo" id="cargo" class="form-control">
+                                    <option value="vendedor">Vendedor</option>
+                                </select>
+                            
                             </div>
 
                       
                            <div class="form-group col-3">
                             
                             <label for="cidade">Cidade:</label>
-                            <input type="text" id="cidade" class="form-control" name="cidade" value=<?php $v->cidade ?>>
-                        
+                            <select name="cidade" id="cidade" class="form-control">
+                                    <option></option>
+                                    <option value="RECIFE">Recife</option>
+                                    <option value="JOÃO PESSOA">João Pessoa</option>
+                                    <option value="NATAL">Natal</option>
+                                    <option value="RIO DE JANEIRO">Rio de Janeiro</option>
+                                    <option value="SÃO PAULOP">São Paulo</option>
+                                    <option value="TIMBAUBA">Timbaúba</option>
+                                    <option value="CARPINA">Carpina</option>
+                                    <option value="GOIANA">Goiana</option>
+                                    <option value="MACEIO">Maceio</option>
+                                    <option value="ALIANÇA">Aliança</option>
+                                    <option value="FERREIROS">Ferreiros</option>
+                                    <option value="ITAMBÉ">Itambe</option>
+                                    <option value="NAZARÉ DA MATA">Nazare</option>
+                                    <option value="TRACUNHAEM">Tracunhaem</option>
+                                    <option value="PAUDALHO">Paudalho</option>
+                                    <option value="GUADALAJARA">Guadalajara</option>
+                                </select>
                            </div>
 
 
@@ -141,11 +161,16 @@ $v = $vc->find($_GET['e']);
                             <div class="form-group col-2">
                             
                             <label for="estado">Estado:</label>
-                                <select name="estado" id="estado" class="form-control" value=<?php $v->estado ?>>
-                                    <option value="1">PE</option>
-                                    <option value="2">PB</option>
-                                </select>
-                            
+                            <select name="estado" id="estado" class="form-control">
+                                    <option></option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PB">Paraiba</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="AL">Alagoas</option>
+                                    
+                                </select> 
                             </div>
 
                             <div class="form-group col-2">
@@ -164,12 +189,13 @@ $v = $vc->find($_GET['e']);
                             <div class="form-group col-2">
 
                                 <label for="senha">Senha:</label>
-                                <input type="text" id="senha" class="form-control" name="senha" value=<?php $v->senha ?>>
+                                <input type="password" id="senha" class="form-control" name="senha" value=<?php $v->senha ?>>
 
                             </div>
 
                             <input type="submit" class="btn btn-primary" name="editarVendedor" id="editarVendedor" value="Concluir Edição"/>
-                 
+                            <a href="Menu.php" class="btn btn-secondary">Cancelar Edição</a>
+                         
                             
                     </div>
                 </div>

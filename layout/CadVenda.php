@@ -7,8 +7,8 @@ require_once '../Models/Save.php';
 $cc = new ClienteController();
 
 ?>
-
-<div class="container">
+<body style="background-color: #DCDCDC;">
+<div class="container" style="background-color: #DCDCDC;">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <form method="post" action="../Models/Save.php">
@@ -24,9 +24,10 @@ $cc = new ClienteController();
                             <div class="form-group col-5">
                                 <label for="clienteId">Cliente:</label>
                                 <select name="clienteId" id="clienteId" class="form-control">
+                                <option></option>
+                                      
                                     <?php foreach ($cc->findAll() as $cliente) : ?>
                                     
-                                        <option selectd></option>
                                         <option value="<?= $cliente->id ?>"> <?= $cliente->nome ?></option>
                                     <?php endforeach; ?>
                                 </select>

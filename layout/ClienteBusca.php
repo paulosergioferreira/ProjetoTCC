@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <?php
 require_once'../controller/ClienteController.php';
 $cc = new ClienteController();
@@ -24,19 +24,14 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-10">
+            <div class="form-group col-11">
               <input type="text" name="b" id="b" class="form-control">
             </div>
             
             <div class="form-group col-1">
               <input type="submit" class="btn btn-primary" value="Buscar">
-            </div>
-            <div class="form-group col-1">
-              
-            <a href="CadCliente.php" class="btn btn-secondary">Voltar</a>
-                                
-            </div>
-      
+            </div>      
+
         </div>
       </form>
     </div>
@@ -51,9 +46,9 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
             <th scope="col">NOME</th>
             <th scope="col">RG</th>
             <th scope="col">CPF</th>
+            <th scope="col">TELEFONE</th>
             <th scope="col">LOGIN</th>
-            <th scope="col">SENHA</th>
-           
+            
             
           </tr>
         </thead>
@@ -67,8 +62,8 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                       <td><?= $clike->nome ?></td>
                       <td><?= $clike->rg ?></td>
                       <td><?= $clike->cpf ?></td>
+                      <td><?= $clike->telefone ?></td>
                       <td><?= $clike->login ?></td>
-                      <td><?= $clike->senha ?></td>
                       
                       <td>
                           <a href="EditarCliente.php?e=<?= $clike->id ?>" class="btn btn-primary">Editar</a>
@@ -91,8 +86,8 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                     <td><?= $c->nome ?></td>
                     <td><?= $c->rg ?></td>
                     <td><?= $c->cpf ?></td>
+                    <td><?= $c->telefone ?></td>
                     <td><?= $c->login ?></td>
-                    <td><?= $c->senha ?></td>
                     
                     <td>
                         <a href="EditarCliente.php?e=<?= $c->id ?>" class="btn btn-primary">Editar</a>
@@ -104,7 +99,12 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
             <?php endforeach; ?>
         <?php endif; ?>
         </tbody>
+        <div class="col-md-12">
+      </div>
       </table>
+        <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+        <a href="../layout/CadCliente.php" class="btn btn-secondary btn-block">Cadastrar Clientes</a>        
+     
     </div>
   </div>
 </div>

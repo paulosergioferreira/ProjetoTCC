@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <?php
 require_once'../controller/VendaController.php';
 require_once'../controller/ClienteController.php';
@@ -26,14 +26,11 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
     <div class="col-md-12">
       <form>
         <div class="form-row">
-            <div class="form-group col-10">
+            <div class="form-group col-11">
               <input type="text" name="b" id="b" class="form-control">
             </div>
             <div class="form-group col-1">
-              <input type="submit" class="btn btn-success btn-danger" value="Buscar">
-            </div>
-            <div class="form-group col-1">
-              <a href="Menu.php" class="btn btn-secondary" >Voltar</a>
+              <input type="submit" class="btn btn-primary" value="Buscar">
             </div>
         </div>
       </form>
@@ -109,6 +106,9 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
         <?php endif; ?>
         </tbody>
       </table>
+        <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+        <a href="../layout/CadVenda.php" class="btn btn-secondary btn-block">Cadastrar Vendas</a>        
+    
     </div>
   </div>
 </div>

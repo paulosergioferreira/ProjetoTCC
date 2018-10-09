@@ -4,7 +4,6 @@ require_once '../controller/ClienteController.php';
 require_once '../Models/Model.php';
 $cc = new ClienteController();
 
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@ $cc = new ClienteController();
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <div class="container">
     <div class="row form-cadastro">
         <div class="col-md-12">
@@ -34,10 +33,7 @@ $cc = new ClienteController();
                     <th>Dt.Nasc</th>
                     <th>Telefone</th>
                     <th>Login</th>
-                    <th>Senha</th>
-                    
-                  
-                    
+                         
                   </tr>
                 </thead>
 
@@ -52,7 +48,6 @@ $cc = new ClienteController();
                     <td><?php echo $value->dtnasc; ?></td>
                     <td><?php echo $value->telefone; ?></td>
                     <td><?php echo $value->login; ?></td>
-                    <td><?php echo $value->senha; ?></td>
                      
                     </tr>
                     </tbody>
@@ -60,7 +55,8 @@ $cc = new ClienteController();
             </table>
         </div>
         <div class="col-md-12">
-            <a href="../layout/Menu.php" class="btn btn-secondary btn-block">Voltar</a>
+            <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+            <a href="../layout/CadCliente.php" class="btn btn-secondary btn-block">Cadastrar Clientes</a>        
         </div>
     </div>
 </div>

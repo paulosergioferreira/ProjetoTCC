@@ -18,7 +18,7 @@ $vc = new VendedorController();
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body style="background-color: #DCDCDC;">
 <div class="container">
     <div class="row form-cadastro">
         <div class="col-md-12">
@@ -27,14 +27,13 @@ $vc = new VendedorController();
            <tr>
                     <th>ID</th>
                     <th>Nome</th>
-                    <th>CPF</th>  
                     <th>RG</th>
+                    <th>CPF</th>  
                     <th>Cargo</th>
-                    <th>Login</th>
-                    <th>Senha</th>
-                    
-                  
-                    
+                    <th>Dt.Nasc</th>
+                    <th>Telefone</th>
+                    <th>Login</th>  
+                        
                   </tr>
                 </thead>
 
@@ -43,11 +42,12 @@ $vc = new VendedorController();
                     <tr>
                     <td><?php echo $value->id; ?></td>
                     <td><?php echo $value->nome; ?></td>
-                    <td><?php echo $value->cpf; ?></td>
                     <td><?php echo $value->rg; ?></td> 
+                    <td><?php echo $value->cpf; ?></td>
                     <td><?php echo $value->cargo; ?></td>
+                    <td><?php echo $value->dtnasc; ?></td>
+                    <td><?php echo $value->telefone; ?></td>
                     <td><?php echo $value->login; ?></td>
-                    <td><?php echo $value->senha; ?></td>
                      
                        
                     </tr>
@@ -56,7 +56,8 @@ $vc = new VendedorController();
             </table>
         </div>
         <div class="col-md-12">
-            <a href="../layout/menu.php" class="btn btn-secondary btn-block">Voltar</a>
+            <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+            <a href="../layout/CadVendedor.php" class="btn btn-secondary btn-block">Cadastrar Vendedor</a>        
         </div>
     </div>
 </div>
