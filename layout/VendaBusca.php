@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pesquisar Venda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/styles.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
 </head>
 <body style="background-color: #DCDCDC;">
 <?php
@@ -55,9 +59,8 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
         </thead>
         <tbody>    
         <?php if (isset($_GET['b']) && $_GET['b'] != null) : ?>
-
             <?php foreach ($vc->buscarPorId($_GET['b']) as $clike) : ?>
-
+          
               <?php if ($clike != null) { ?>
                   <tr>
                        <th scope="row"><?= $clike->id ?></th>
@@ -77,6 +80,7 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                   </tr>
                <?php 
             } else {
+               
               echo "Não conseguimos encontrar, Tente novamente!";
             } ?>
                
@@ -85,7 +89,7 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                 
               <?php foreach ($vc->findAll() as $v) : ?>
                 <tr>
-                    
+              
                     <th scope="row"><?= $v->id ?></th>
                     <td><?= $v->destino ?></td>
                     <td><?= $v->transporte ?></td>
@@ -94,7 +98,6 @@ if (isset($_GET['d']) && $_GET['d'] != null) {
                     <td><?= $cc->find($v->usuarioId)->nome ?></td>
                     <td><?= $v->preco ?></td>
                      
-                 
                     <td>
                         <a href="EditarVenda.php?e=<?= $v->id ?>" class="btn btn-primary">Editar</a>
                         <a href="?d=<?= $v->id ?>" class="btn btn-secondary">Deletar</a>

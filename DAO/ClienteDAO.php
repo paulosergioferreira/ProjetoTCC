@@ -12,9 +12,9 @@ class ClienteDAO extends Model
 
     public function insert($obj)
     {
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NOME`, `RG`, `CPF`, `SEXO`, `DTNASC`, `TELEFONE`, `NUMERO_CASA`, `RUA`, `BAIRRO`,
-                                                                            `CIDADE`, `ESTADO`, `CEP`, `LOGIN`, `SENHA`, `SITUACAO`)
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NOME`, `RG`, `CPF`, `SEXO`, `DTNASC`, 
+        `TELEFONE`, `NUMERO_CASA`, `RUA`, `BAIRRO`,`CIDADE`, `ESTADO`, `CEP`, `LOGIN`, `SENHA`, `SITUACAO`)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getNome());
         $stmt->bindValue(2, $obj->getRg());
@@ -33,17 +33,16 @@ class ClienteDAO extends Model
         $stmt->bindValue(15, $obj->getSituacao());
 
         $stmt->execute();
-        ;
-
+    
     }
 
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET NOME = ?, RG = ?, CPF = ?, SEXO = ?, DTNASC = ?, TELEFONE = ?,
-                                                 NUMERO_CASA = ?, RUA = ?, BAIRRO = ?, CIDADE = ?, ESTADO = ?, CEP = ?, LOGIN = ?,
-                                                 SENHA = ?, SITUACAO = ?
-                                                 WHERE ID = ?");
+        SET NOME = ?, RG = ?, CPF = ?, SEXO = ?, DTNASC = ?, TELEFONE = ?,
+        NUMERO_CASA = ?, RUA = ?, BAIRRO = ?, CIDADE = ?, ESTADO = ?,
+        CEP = ?, LOGIN = ?, SENHA = ?, SITUACAO = ? WHERE ID = ?");
+        
         $stmt->bindValue(1, $obj->getNome());
         $stmt->bindValue(2, $obj->getRg());
         $stmt->bindValue(3, $obj->getCpf());
@@ -61,9 +60,9 @@ class ClienteDAO extends Model
         $stmt->bindValue(15, $obj->getSituacao());
         $stmt->bindValue(16, $obj->getId());
 
-
         $stmt->execute();
         $stmt->closeCursor();
+    
     }
 
     public function findName($nome)

@@ -1,12 +1,9 @@
 <?php
 
-//Pega as informações inseridas pelos usuarios´p
-
 require_once '../Models/Cliente.php';
 require_once '../DAO/ClienteDAO.php';
 require_once '../lib/DB.php';
-class ClienteController
-{
+class ClienteController{
     private $c;
     private $cdao;
 
@@ -15,8 +12,7 @@ class ClienteController
         $this->c = new Cliente();
         $this->cdao = new ClienteDAO();
     }
-
-    //Pegando os valores inseridos no layout de cadastro que foram trasidos pela classe save e inserindo eles nos setrs.
+    
     public function insert(
         $nome,
         $rg,
@@ -33,7 +29,7 @@ class ClienteController
         $login,
         $senha,
         $situacao
-    ) {
+        ){
 
         $this->c->setNome($nome);
         $this->c->setRg($rg);
@@ -50,12 +46,10 @@ class ClienteController
         $this->c->setLogin($login);
         $this->c->setSenha($senha);
         $this->c->setSituacao($situacao);
-       
         //passando os valores como objeto para a classe ClienteDÂO
         $this->cdao->insert($this->c);
-
     }
-
+    
     public function update(
         $id,
         $nome,
@@ -73,7 +67,7 @@ class ClienteController
         $login,
         $senha,
         $situacao
-    ) {
+        ){
 
         $this->c->setId($id);
         $this->c->setNome($nome);

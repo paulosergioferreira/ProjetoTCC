@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <script type="text/javascript" src="js/jquery-3.3.1.min"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
@@ -23,6 +26,7 @@
                 
 
 <?php
+
 if (isset($_POST['Acessar']) && $_POST['login'] != null && $_POST['senha'] != null) {
 
     header("location: ../layout/menu.php");
@@ -42,7 +46,8 @@ if (isset($_POST['Acessar']) && $_POST['login'] != null && $_POST['senha'] != nu
           <div class="form-group col-12"></br></br></br></br></br>
           
             <label for="login">Login</label>
-           
+
+          
             <input type="text" class="form-control" id="login" name="login" placeholder="Entre com seu Login">
     
           </div>

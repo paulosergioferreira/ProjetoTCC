@@ -1,40 +1,36 @@
-<?php require_once '../controller/ClienteController.php'; 
+<?php 
+require_once '../controller/ClienteController.php'; 
 require_once '../Models/Save.php';
-
 ?>
 
-<?php
-$cc = new ClienteController();
+<?php $cc = new ClienteController(); ?>
 
-?>
 <body style="background-color: #DCDCDC;">
 <div class="container" style="background-color: #DCDCDC;">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    
+    <script type="text/javascript" src="js/jquery-3.3.1.min"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/styles.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
     <form method="post" action="../Models/Save.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <input type="number" name="estado" value="1" hidden>
-
-                <div class="card">
-                    <h5 class="card-header">Compra da Viagem</h5>
-                    
-
+                    <div class="card">
+                        <h5 class="card-header">Compra da Viagem</h5>
                         <div class="form-row">
                             <div class="form-group col-5">
                                 <label for="clienteId">Cliente:</label>
                                 <select name="clienteId" id="clienteId" class="form-control">
                                 <option></option>
-                                      
-                                    <?php foreach ($cc->findAll() as $cliente) : ?>
-                                    
-                                        <option value="<?= $cliente->id ?>"> <?= $cliente->nome ?></option>
-                                    <?php endforeach; ?>
+                                <?php foreach ($cc->findAll() as $cliente) : ?>
+                                    <option value="<?= $cliente->id ?>"> <?= $cliente->nome ?></option>
+                                <?php endforeach; ?> 
                                 </select>
-                        </div>
-
+                            </div>
+                       
                         <div class="form-group col-4">
-           
                                 <label for="destino">Destino:</label>
                                     <select name="destino" id="destino" class="form-control">
                                         <option selectd></option>
@@ -45,7 +41,6 @@ $cc = new ClienteController();
                                         <option value="Amazonas">AM</option>
                                         <option value="São Paulo">SP</option>
                                     </select>
-                        
                         </div>
 
                         <div class="form-group col-3">
@@ -105,8 +100,8 @@ $cc = new ClienteController();
                     <a href="menu.php" class="btn btn-secondary" >Voltar</a>
           
           
-                    </div>
+            </div>
+    </div>
+</form>
 </div>
-    </form>
-</div>
-
+</body>
