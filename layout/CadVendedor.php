@@ -13,7 +13,7 @@
 
 </head>
 
-<body style="background-color: #DCDCDC;">
+<body background="tela1.jpg">
 <?php require_once'../DAO/ClienteDAO.php';
       require_once'../Models/Save.php';?>
 
@@ -23,7 +23,8 @@
             <div class="col-md-12 mt-4">
                 <div class="card">
                     <h5 class="card-header">Cadastro de Vendedores</h5>
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #DCDCDC;">
+                   
                         <div class="form-row">
                             
                             <div class="form-group col-4">

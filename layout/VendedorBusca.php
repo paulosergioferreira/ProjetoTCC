@@ -14,98 +14,100 @@
 
 
 </head>
-<body style="background-color: #DCDCDC;">
-<?php
-require_once'../controller/VendedorController.php';
-$vc = new VendedorController();
-if (isset($_GET['d']) && $_GET['d'] != null) {
-  $vc->delete($_GET['d']);
-}
-?>
+
+<body background="tela1.jpg"> 
+  <?php
+      require_once'../controller/VendedorController.php';
+      $vc = new VendedorController();
+      if (isset($_GET['d']) && $_GET['d'] != null) {
+          $vc->delete($_GET['d']);
+      }
+  ?>
+
 <div class="container" id="tabela">
-  <div class="row mt-4">
-    <div class="col-md-12">
-      <form>
-        <div class="form-row">
-            <div class="form-group col-11">
-              <input type="text" name="b" id="b" class="form-control">
-            </div>
-            <div class="form-group col-1">
-              <input type="submit" class="btn btn-primary" value="Buscar">
-            </div>
-         
-
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <table class="table table-striped">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">NOME</th>
-            <th scope="col">RG</th>
-            <th scope="col">CPF</th>
-            <th scope="col">TELEFONE</th>
-            <th scope="col">LOGIN</th>
-           
-            
-          </tr>
-        </thead>
-        <tbody>    
-        <?php if (isset($_GET['b']) && $_GET['b'] != null) : ?>
-            <?php foreach ($vc->buscarPorNome($_GET['b']) as $vlike) : ?>
-
-              <?php if ($vlike != null) { ?>
-                  <tr>
-                      <th scope="row"><?= $vlike->id ?></th>
-                      <td><?= $vlike->nome ?></td>
-                      <td><?= $vlike->rg ?></td>
-                      <td><?= $vlike->cpf ?></td>
-                      <td><?= $vlike->telefone ?></td>
-                      <td><?= $vlike->login ?></td>
-                     
-                      
-                      <td>
-                          <a href="EditarVendedor.php?e=<?= $vlike->id ?>" class="btn btn-primary">Editar</a>
-                          <a href="?d=<?= $vlike->id ?>"class="btn btn-secondary" >Deletar</a>
-                      </td>
-                      
-                  </tr>
-               <?php 
-            } else {
-              echo "Não conseguimos encontrar, Tente novamente!";
-            } ?>
-               
-          <?php endforeach; ?>
-              <?php else : ?>
+    <div class="card">
+    <h5 class="card-header">Buscar Vendedor</h5>
+    <div class="card-body" style="background-color: #DCDCDC;">
+                   
+      
+      <div class="row mt-4">
+        <div class="col-md-12">
+            <form>
+      
+                <div class="form-row">
                 
-              <?php foreach ($vc->findAll() as $v) : ?>
-                <tr>
-                    
-                    <th scope="row"><?= $v->id ?></th>
-                    <td><?= $v->nome ?></td>
-                    <td><?= $v->rg ?></td>
-                    <td><?= $v->cpf ?></td>
-                    <td><?= $v->telefone ?></td>
-                    <td><?= $v->login ?></td>
-                    <td>
-                        <a href="EditarVendedor.php?e=<?= $v->id ?>" class="btn btn-primary">Editar</a>
-                        <a href="?d=<?= $v->id?>" class="btn btn-secondary" >Deletar</a>
-                    </td>
-                     
-                    
-                     </tr>
-            <?php endforeach; ?>
-        <?php endif; ?>
-        </tbody>
-      </table>
-        <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
-        <a href="../layout/CadVendedor.php" class="btn btn-secondary btn-block">Cadastrar Vendedores</a>        
-    
-    </div>
+                    <div class="form-group col-11">
+                      <input type="text" name="b" id="b" class="form-control">
+                    </div>
+            
+                    <div class="form-group col-1">
+                      <input type="submit" class="btn btn-primary" value="Buscar">
+                    </div>
+        
+                </div>
+              
+            </form>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">NOME</th>
+                      <th scope="col">RG</th>
+                      <th scope="col">CPF</th>
+                      <th scope="col">TELEFONE</th>
+                      <th scope="col">LOGIN</th>
+                    </tr>
+                  </thead>
+                  <tbody>    
+                      <?php if (isset($_GET['b']) && $_GET['b'] != null) : ?>
+                          <?php foreach ($vc->buscarPorNome($_GET['b']) as $vlike) : ?>
+                              <?php if ($vlike != null) { ?>
+                                  <tr>
+                                    <th scope="row"><?= $vlike->id ?></th>
+                                    <td><?= $vlike->nome ?></td>
+                                    <td><?= $vlike->rg ?></td>
+                                    <td><?= $vlike->cpf ?></td>
+                                    <td><?= $vlike->telefone ?></td>
+                                    <td><?= $vlike->login ?></td>
+                                    <td>
+                                    <a href="EditarVendedor.php?e=<?= $vlike->id ?>" class="btn btn-primary">Editar</a>
+                                    <a href="?d=<?= $vlike->id ?>"class="btn btn-danger" >Deletar</a>
+                                    </td>
+                                  </tr>
+                            <?php 
+                                  } else {
+                                  echo "Não conseguimos encontrar, Tente novamente!";
+                            }?>
+          
+                          <?php endforeach; ?>
+                      <?php else : ?>
+                            <?php foreach ($vc->findAll() as $v) : ?>
+                                <tr>
+                                  
+                                  <th scope="row"><?= $v->id ?></th>
+                                    <td><?= $v->nome ?></td>
+                                    <td><?= $v->rg ?></td>
+                                    <td><?= $v->cpf ?></td>
+                                    <td><?= $v->telefone ?></td>
+                                    <td><?= $v->login ?></td>
+                                    <td>
+                                    <a href="EditarVendedor.php?e=<?= $v->id ?>" class="btn btn-primary">Editar</a>
+                                    <a href="?d=<?= $v->id?>" class="btn btn-danger" >Deletar</a>
+                                    </td>
+                                
+                                </tr>
+                            <?php endforeach; ?>
+                      <?php endif; ?>
+                  </tbody>
+              </table>
+              <a href="../layout/Menu.php" class="btn btn-primary btn-block">Menu</a>
+              <a href="../layout/CadVendedor.php" class="btn btn-danger btn-block">Cadastrar Vendedores</a>        
+          </div>
+      </div>
   </div>
 </div>
 </body>

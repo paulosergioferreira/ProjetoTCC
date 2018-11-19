@@ -13,7 +13,7 @@
    
 </head>
 
-<body style="background-color: #DCDCDC;">
+<body background="tela1.jpg">
 
 <?php require_once'../DAO/ClienteDAO.php';?>
     
@@ -23,7 +23,7 @@
                 <div class="col-md-12 mt-4">
                     <div class="card">
                         <h5 class="card-header">Cadastro de Clientes</h5>
-                        <div class="card-body">
+                        <div class="card-body" style="background-color: #DCDCDC;">
                             
                             <div class="form-row">
                                 
@@ -39,7 +39,7 @@
 
                                 <div class="form-group col-2">
                                     <label for="cpf">CPF:</label>
-                                    <input type="text" id="cpf" class="form-control" name="cpf" placeholder="000.000.000-00">
+                                    <input type="text" id="cpf" class="form-control" name="cpf" placeholder="000 . 000 . 000 - 00">
                                 </div>
 
                                 <div class="form-group col-2">
@@ -152,7 +152,7 @@
                             <input type="submit" class="btn btn-primary" name="salvandoCliente" id="salvandoCliente" value="Salvar"/>
                             <a href="ClienteBusca.php" class="btn btn-secondary">Buscar Cliente</a>
                             <a href="Menu.php" class="btn btn-danger">Voltar ao Menu</a>
-                         
+                        </div> 
                     </div>
                 
                 </div>

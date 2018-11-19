@@ -14,22 +14,8 @@ class ClienteController{
     }
     
     public function insert(
-        $nome,
-        $rg,
-        $cpf,
-        $sexo,
-        $dtnasc,
-        $telefone,
-        $numero_casa,
-        $rua,
-        $bairro,
-        $cidade,
-        $estado,
-        $cep,
-        $login,
-        $senha,
-        $situacao
-        ){
+        $nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa,
+        $rua, $bairro, $cidade, $estado, $cep, $login, $senha, $situacao){
 
         $this->c->setNome($nome);
         $this->c->setRg($rg);
@@ -51,23 +37,8 @@ class ClienteController{
     }
     
     public function update(
-        $id,
-        $nome,
-        $rg,
-        $cpf,
-        $sexo,
-        $dtnasc,
-        $telefone,
-        $numero_casa,
-        $rua,
-        $bairro,
-        $cidade,
-        $estado,
-        $cep,
-        $login,
-        $senha,
-        $situacao
-        ){
+        $id, $nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa,
+        $rua, $bairro, $cidade, $estado, $cep, $login, $senha, $situacao){
 
         $this->c->setId($id);
         $this->c->setNome($nome);

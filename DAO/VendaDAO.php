@@ -12,8 +12,8 @@ class VendaDAO extends Model
 
     public function insert($obj)
     {
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`DESTINO`, `PRECO`, `TRANSPORTE`, `NIVELHOTEL`, `TRANSLADO`, `DESCRICAO`,
-         `DIARIA`, `TIPO`, `USUARIOID`)VALUES (?,?,?,?,?,?,?,?,?)");
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`DESTINO`, `PRECO`, `TRANSPORTE`, `NIVELHOTEL`,
+         `TRANSLADO`, `DESCRICAO`,`DIARIA`, `TIPO`, `USUARIOID`)VALUES (?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getDestino());
         $stmt->bindValue(2, $obj->getPreco());
@@ -33,9 +33,9 @@ class VendaDAO extends Model
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET DESTINO = ?, PRECO = ?, TRANSPORTE = ?, NIVELHOTEL = ?, TRANSLADO = ?, DESCRICAO = ?,
-                                                 DIARIA = ?, TIPO = ?, USUARIOID = ?
-                                                 WHERE ID = ?");
+                                                 SET DESTINO = ?, PRECO = ?, TRANSPORTE = ?, NIVELHOTEL = ?, TRANSLADO = ?, 
+                                                 DESCRICAO = ?, DIARIA = ?, TIPO = ?, USUARIOID = ? WHERE ID = ?");
+                                                 
         $stmt->bindValue(1, $obj->getDestino());
         $stmt->bindValue(2, $obj->getPreco());
         $stmt->bindValue(3, $obj->getTransporte());

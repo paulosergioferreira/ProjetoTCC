@@ -3,45 +3,42 @@
 
 
 <?php
-$vc = new VendaController();
-$cc = new ClienteController();
-$v = $vc->find($_GET['e']);
+    $vc = new VendaController();
+    $cc = new ClienteController();
+    $v = $vc->find($_GET['e']);
 ?>
 
-<div class="container">
-<script type="text/javascript" src="js/jquery-3.3.1.min"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min"></script>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/css/styles.css">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-
+<body background="tela1.jpg">    
+<div class="container">
     <form method="post" action="../Models/Save.php">
+        
         <div class="row">
             <div class="col-md-12 mt-4">
-            <input type="number" hidden name="id" value="<?= $v->id ?>">
-
+                <input type="number" hidden name="id" value="<?= $v->id ?>">
                 <input type="number" name="estado" value="1" hidden>
-
-                <div class="card">
-                    <h5 class="card-header">Editar Viagem</h5>
-                    
-
+                    <div class="card">
+                        <h5 class="card-header">Editar Viagem</h5>
+                        <div class="card-body" style="background-color: #DCDCDC;">
+                   
                         <div class="form-row">
-                      
+                            
                             <div class="form-group col-5">
+                                
                                 <label for="clienteId">Cliente:</label>
-                                <select name="clienteId" id="clienteId" class="form-control">
-                                <option></option>
-                                      
-                                    <?php foreach ($cc->findAll() as $c) : ?>
-                                       <option value="<?= $c->id ?>"> <?= $c->nome ?></option>
+                                    <select name="clienteId" id="clienteId" class="form-control">
+                                            <option></option>
+                                        <?php foreach ($cc->findAll() as $c) : ?>
+                                            <option value="<?= $c->id ?>"> <?= $c->nome ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                            
+                            </div>
 
-                                    <?php endforeach; ?>
-                                </select>
-                        </div>
-
-                        <div class="form-group col-4">
-           
+                            <div class="form-group col-4">
                                 <label for="destino">Destino:</label>
                                     <select name="destino" id="destino" class="form-control">
                                         <option selectd></option>
@@ -52,66 +49,74 @@ $v = $vc->find($_GET['e']);
                                         <option value="Amazonas">AM</option>
                                         <option value="São Paulo">SP</option>
                                     </select>
-                        
-                        </div>
+                            </div>
 
-                        <div class="form-group col-3">
+                            <div class="form-group col-3">
+                                
                                 <label for="nivelHotel">Nivel do Hotel:</label>
-                                   <select name="nivelHotel" id="nivelHotel" class="form-control">
+                                    <select name="nivelHotel" id="nivelHotel" class="form-control">
                                         <option selectd></option>
                                         <option value="1">1 estrelas</option>
                                         <option value="2">2 estrelas</option>
                                         <option value="3">3 estrelas</option>
                                         <option value="4">4 estrelas</option>
                                         <option value="5">5 estrelas</option>
-                                   </select>
-                        </div>
-
-                        <div class="form-group col-3">
-                            <label for="translado">Translado:</label>
-                                <select name="translado" id="translado" class="form-control">
-                                    <option value="1">Sim</option>
-                                    <option value="2" selectd>Não</option>
-                                </select>
-                        </div>
-                        
-                        <div class="form-group col-3">
-                            <label for="diaria">Diaria:</label>
-                            <input type="number" id="diaria" class="form-control" name="diaria">
-                        </div>
-                        
-                        <div class="form-group col-3">
-                            <label for="tipo">Tipo pagamento:</label>
-                                <select name="tipo" id="tipo" class="form-control">
-                                    <option selectd></option>
-                                    <option value="À VISTA">Boleto</option>
-                                    <option value="CARTÃO">Cartão de credito</option>
-                                </select>
-                        </div>
-
-                        <div class="form-group col-3">
-                            <label for="tipo">Transporte:</label>
-                                <select name="transporte" id="transporte" class="form-control">
-                                    <option selectd></option>
-                                    <option value="aviao">Avião</option>
-                                    <option value="onibus">Ônibus</option>
-                                    <option value="navio">Navio</option>
-                                </select>
-                        </div>
-
-                        <div class="form-group col-12">
-                            <label for="exampleFormControlTextarea1">Descrição</label>
-                            <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
-                        </div>
-                        </div>
-                            <input type="hidden" id="preco" class="form-control" name="preco">
+                                    </select>
                             
-                       
-                    <input type="submit" name="editarVenda" value="Editar compra" class="btn btn-primary">
-                    <a href="Menu.php" class="btn btn-secondary">Cancelar Edição</a>
-                         
+                            </div>
+
+                            <div class="form-group col-3">
+                                
+                                <label for="translado">Translado:</label>
+                                    <select name="translado" id="translado" class="form-control">
+                                        <option value="1">Sim</option>
+                                        <option value="2" selectd>Não</option>
+                                    </select>
+                            
+                            </div>
+                        
+                            <div class="form-group col-3">
+                                
+                                <label for="diaria">Diaria:</label>
+                                <input type="number" id="diaria" class="form-control" name="diaria">
+                            
+                            </div>
+                        
+                            <div class="form-group col-3">
+                                <label for="tipo">Tipo pagamento:</label>
+                                    <select name="tipo" id="tipo" class="form-control">
+                                        <option selectd></option>
+                                        <option value="À VISTA">Boleto</option>
+                                        <option value="CARTÃO">Cartão de credito</option>
+                                    </select>
+                            </div>
+
+                            <div class="form-group col-3">
+                                <label for="tipo">Transporte:</label>
+                                    <select name="transporte" id="transporte" class="form-control">
+                                        <option selectd></option>
+                                        <option value="aviao">Avião</option>
+                                        <option value="onibus">Ônibus</option>
+                                        <option value="navio">Navio</option>
+                                    </select>
+                            </div>
+
+                            <div class="form-group col-12">
+                                
+                                <label for="exampleFormControlTextarea1">Descrição</label>
+                                <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
+                            
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" id="preco" class="form-control" name="preco">
+                        <input type="submit" name="editarVenda" value="Editar compra" class="btn btn-primary">
+                        <a href="Menu.php" class="btn btn-danger">Cancelar Edição</a>
+                    
                     </div>
-</div>
+            </div>
+        </div>
     </form>
+</div>    
 </div>
 

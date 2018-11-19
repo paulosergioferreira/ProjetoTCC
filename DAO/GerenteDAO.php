@@ -12,9 +12,10 @@ class GerenteDAO extends Model
 
     public function insert($obj)
     {
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NOME`, `RG`, `CPF`, `SEXO`, `DTNASC`, `TELEFONE`, `NUMERO_CASA`, `RUA`, `BAIRRO`,
-                                                                            `CIDADE`, `ESTADO`, `CEP`, `LOGIN`, `SENHA`, `NIVEL_FUNC`, `CARGO`)
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NOME`, `RG`, `CPF`, `SEXO`, `DTNASC`, 
+                                                    `TELEFONE`, `NUMERO_CASA`, `RUA`, `BAIRRO`,`CIDADE`,
+                                                    `ESTADO`, `CEP`, `LOGIN`, `SENHA`, `NIVEL_FUNC`, `CARGO`)
+                                                     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getNome());
         $stmt->bindValue(2, $obj->getRg());

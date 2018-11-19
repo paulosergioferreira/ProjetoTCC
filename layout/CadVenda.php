@@ -5,8 +5,9 @@ require_once '../Models/Save.php';
 
 <?php $cc = new ClienteController(); ?>
 
-<body style="background-color: #DCDCDC;">
-<div class="container" style="background-color: #DCDCDC;">
+<body background="tela1.jpg">
+  
+  <div class="container" >
     
     <script type="text/javascript" src="js/jquery-3.3.1.min"></script>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -19,6 +20,8 @@ require_once '../Models/Save.php';
                 <input type="number" name="estado" value="1" hidden>
                     <div class="card">
                         <h5 class="card-header">Compra da Viagem</h5>
+                        <div class="card-body" style="background-color: #DCDCDC;">
+                   
                         <div class="form-row">
                             <div class="form-group col-5">
                                 <label for="clienteId">Cliente:</label>
@@ -96,7 +99,7 @@ require_once '../Models/Save.php';
                             
                        
                     <input type="submit" name="comprar" value="Confirmar compra" class="btn btn-primary">
-                    <a href="../layout/VendaBusca.php" class="btn btn-red">Buscar Venda</a>
+                    <a href="../layout/VendaBusca.php" class="btn btn-danger">Buscar Venda</a>
                     <a href="menu.php" class="btn btn-secondary" >Voltar</a>
           
           

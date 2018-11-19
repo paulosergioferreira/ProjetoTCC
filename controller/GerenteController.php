@@ -18,23 +18,8 @@ class GerenteController
 
     //Pegando os valores inseridos no layout de cadastro que foram trasidos pela classe save e inserindo eles nos setrs.
     public function insert(
-        $nome,
-        $rg,
-        $cpf,
-        $sexo,
-        $dtnasc,
-        $telefone,
-        $numero_casa,
-        $rua,
-        $bairro,
-        $cidade,
-        $estado,
-        $cep,
-        $login,
-        $senha,
-        $nivel_func,
-        $cargo
-    ) {
+        $nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa, $rua,
+        $bairro, $cidade, $estado, $cep, $login, $senha, $nivel_func, $cargo){
 
         $this->g->setNome($nome);
         $this->g->setRg($rg);
@@ -59,24 +44,8 @@ class GerenteController
     }
 
     public function update(
-        $id,
-        $nome,
-        $rg,
-        $cpf,
-        $sexo,
-        $dtnasc,
-        $telefone,
-        $numero_casa,
-        $rua,
-        $bairro,
-        $cidade,
-        $estado,
-        $cep,
-        $login,
-        $senha,
-        $nivel_func,
-        $cargo
-    ) {
+        $id, $nome, $rg, $cpf, $sexo, $dtnasc, $telefone, $numero_casa,
+        $rua, $bairro, $cidade, $estado, $cep, $login, $senha, $nivel_func, $cargo){
 
         $this->g->setId($id);
         $this->g->setNome($nome);
